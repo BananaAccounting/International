@@ -1,0 +1,146 @@
+
+Singapore Chart of Accounts 	
+1001	cash_account_code_prefix
+1002	bank_account_code_prefix
+101001	Allowance for bad debts
+101002	Development costs
+101003	Employee cash advances
+101004	Inventory
+101005	Investments - other
+101006	Loans to officers
+101007	Loans to others
+101008	Loans to shareholders
+101009	Prepaid expenses
+101010	Retainage
+101011	Undeposited funds
+101012	Other Current Assets
+102001	Accumulated amortisation
+102002	Accumulated depreciation
+102003	Accumulated depletion
+102004	Buildings
+102005	Depletable assets
+102006	Furniture and fixtures
+102007	Leasehold improvements
+102008	Machinery and equipment
+102009	Vehicles
+102010	Other Assets
+103001	Intangible Assets
+103002	Accumulated amortization of non-current assets
+103003	Available-for-sale financial assets
+103004	Deferred tax
+103005	Goodwill
+103006	Investments
+103007	Lease Buyout
+103008	Licences
+103009	Organisational costs
+103010	Other intangible assets
+103011	Other non-current assets
+103012	Prepayments and accrued income
+103013	Security Deposits
+103014	Other non-current assets
+104001	Trade Receivable Account
+104002	Other Receivable Account
+105001	Purchase Tax Account 7% TX-N33
+105002	Purchase Tax Account 7% TX-E33
+105003	Purchase Tax Account 7% BL
+105004	Purchase Tax Account 7% IM
+105005	Purchase Tax Account 7% TX-RE
+105006	Purchase Tax Account 0% ME
+105007	Purchase Tax Account 0% NR
+105008	Purchase Tax Account 0% ZP
+105009	Purchase Tax Account 0% OP
+105010	Purchase Tax Account 0% EP
+105011	Purchase Tax Account MES
+105012	Purchase Tax Account 7% TX7
+200001	Current portion of employee benefits obligations
+200002	Current portion of obligations under finance leases
+200003	Current Tax Liability
+200004	Insurance Payable
+200005	Interest payables
+200006	Line of Credit
+200007	Loan Payable
+200008	Payroll Clearing
+200009	Payroll liabilities
+200010	Prepaid Expenses Payable
+200011	Provision for warranty obligations
+200012	Rents in trust - Liability
+200013	GST Payable
+200014	Short term borrowings
+200015	Client Trust Accounts - Liabilities
+201001	Accruals and Deferred Income
+201002	Bank loans
+201003	Obligations under finance leases
+201004	Long term borrowings
+201005	Long term employee benefit obligations
+201006	Notes Payable
+201007	Shareholder Notes Payable
+201008	Other non-current liabilities
+Trade Payable Account	name
+202001	Trade Payable Account
+202002	Other Payable Account
+203001	Partner's Equity
+203002	Accumulated Adjustment
+203003	Ordinary shares
+203004	Opening Balance Equity
+203005	Owner's Equity
+203006	Paid-in capital or surplus
+203007	Preferred shares
+203008	Retained Earnings
+203009	Share capital
+203010	Treasury Shares
+204001	Sales Tax Account 0% ES33
+204002	Sales Tax Account 7% DS
+204003	Sales Tax Account 0% ESN33
+204004	Sales Tax Account 0% OS
+204005	Sales Tax Account 0% ZR
+204006	Sales Tax Account 7% SR
+300001	Discounts/refunds given
+300002	Non-profit revenue
+300003	Other primary revenue
+300004	Sales of product revenue
+300005	Service/fee revenue
+300006	Unapplied cash payment income
+301001	Dividend revenue
+301002	Gain/loss on sale of fixed assets or investments
+301003	Interest earned
+301004	Other investment revenue
+301005	Other miscellaneous revenue
+301006	Tax-exempt interest
+401001	Cost of Labour - COS
+401002	Equipment rental - COS
+401003	Freight and delivery - COS
+401004	Other costs of sales - COS
+401005	Supplies and materials - COS
+501001	Administrative expenses
+501002	Advertising/promotional
+501003	Auto
+501004	Bad debts
+501005	Bank charges
+501006	Charitable contributions
+501007	Cost of labour
+501008	Distribution costs
+501009	Dues and subscriptions
+501010	Entertainment
+501011	Meals and entertainment
+501013	Finance costs
+501014	Insurance
+501015	Interest paid
+501016	Legal and professional fees
+501017	Other miscellaneous service cost
+501018	Payroll expenses
+501019	Promotional meals
+501020	Rent or lease of buildings
+501021	Repair and maintenance
+501022	Shipping, freight, and delivery
+501023	Supplies
+501024	Taxes paid
+501025	Travel
+501026	Travel meals
+501027	Utilities
+501028	Unapplied cash bill payment expense
+502001	Amortisation
+502002	Depreciation
+502003	Exchange Gain or Loss
+502004	Other Expense
+502005	Penalties and settlements
+
