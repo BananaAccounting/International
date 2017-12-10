@@ -33,14 +33,24 @@ Based on a first evaluation of the documents provided by the UAE FAT it should b
 
 # Minimum Viable Product (MVP)
 
-In collaboration with existing  Banana Accounting users we would like to create an open source MVP BananaApp for UAE. 
+In collaboration with users we would like to create an BananaApp for UAE. 
 This development should then become the base for an evaluation from the FTA.
-* Verify the exact requirements.
-* Create and Accounting file (double entry accounting) for UAE Small company
-  * Accounting plan 
-  * VAT Table with all the Codes necessary for complying with the VAT report  
-* BananaApps with Summary information
-* BananaApps for FAF 
+
+* Specifications
+  * BananaApps, Open source based development method.
+  * Based on Banana Accounting 9 [Download Beta 9](https://www.banana.ch/en/node/10142)
+  * Rpository available on github
+
+* Verify the requirements
+  The FAF development should go in sync with the process of understanding and complying with the FAT requirements.
+
+* Developments
+  * Create and Accounting file (double entry accounting) for UAE Small company
+    * Multi-Curreny?
+	* Accounting plan 
+    * VAT Table with all the Codes necessary for complying with the VAT report  
+  * BananaApps with Summary information
+  * BananaApps for FAF 
 
 ## Reference documentation 
 * Banana Accounting Documentation
