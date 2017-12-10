@@ -43,11 +43,17 @@ This development should then become the base for an evaluation from the FTA.
 * BananaApps for FAF 
 
 ## Reference documentation 
-* [Federal Tax Authority web site](https://www.tax.gov.ae/requirement-tax-accounting.aspx)
-* [User guide Tax return](https://home.kpmg.com/content/dam/kpmg/ae/pdf/userguide-excise-tax-returns-uae.pdf)
-* [Certification Application Forms for Tax Accounting Software Providers](https://www.tax.gov.ae/pdf/application-forms-for-tax-accounting-software.pdf)
-* [Certification Guidelines for Tax Accounting Software Providers](https://www.tax.gov.ae/pdf/certification-guidelines-for-tax-accounting-software.pdf)
-* [Requirements Document for Tax Accounting Software](https://www.tax.gov.ae/pdf/requirement-document-for-tax-accounting-software.pdf)
+* Banana Accounting Documentation
+  * [VAT management](https://www.banana.ch/doc9/en/node/5079)
+  * [Adapt the VAT table](https://www.banana.ch/doc9/en/node/8251)
+  * [Chart of accounts](https://www.banana.ch/doc9/en/node/3838)
+  
+* UAE Federal Tax Authority (FAT)
+  * [Federal Tax Authority web site](https://www.tax.gov.ae/requirement-tax-accounting.aspx)
+  * [User guide Tax return](https://home.kpmg.com/content/dam/kpmg/ae/pdf/userguide-excise-tax-returns-uae.pdf)
+  * [Certification Application Forms for Tax Accounting Software Providers](https://www.tax.gov.ae/pdf/application-forms-for-tax-accounting-software.pdf)
+  * [Certification Guidelines for Tax Accounting Software Providers](https://www.tax.gov.ae/pdf/certification-guidelines-for-tax-accounting-software.pdf)
+  * [Requirements Document for Tax Accounting Software](https://www.tax.gov.ae/pdf/requirement-document-for-tax-accounting-software.pdf)
 
 ## Related information
 * [Gulf Cooperation Council](https://en.wikipedia.org/wiki/Gulf_Cooperation_Council)
