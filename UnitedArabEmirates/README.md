@@ -13,23 +13,10 @@ The UAE Federal Tax Authority (FTA) requires accounting software to meet certain
 
 # Feasibility of conforming with the requirements 
 Banana Accounting is a Universal Accounting software extremely versatile and already used in more the 120 countries.
-BananaApps are extension to the software that allows to create reporting based on  country specific requirements.
-Thanks to this extensibility over the last years it has been able to develops country specific solution: 
-* Austria 
-  * Standard Audit File (based on OECD).
-  * VAT Reporting for the standard VAT Form.  
-* Germany 
-  * VAT Reporting.
-  * VAT summary file for uploading to the VAT authority portal.
-* Switzerland
-  * Different VAT reporting 
-* Italy
-  * Quarterly VAT reporting in XML format for upload.
-  * XML file with customers and suppliers invoice data. 
-* China
-  Small companies Balance Sheet and Profit and Loss reports
+Thanks to the agile development provided by BananaApps it is possible application for specific reporting, in print or file.
+We have [already developed many solutions](https://www.banana.ch/doc9/en/node/9058), for Austria, China, Germany, Italy, Switzerland and othe countries.
   
-Based on a first evaluation of the documents provided by the UAE FAT it should be possible to develop a BananaApps with the necessary functionality.
+Based on a first evaluation of the documents provided by the UAE FAT it should be possible to develop a BananaApps with the necessary functionality required by the UAE FTA.
 
 # Minimum Viable Product (MVP)
 
