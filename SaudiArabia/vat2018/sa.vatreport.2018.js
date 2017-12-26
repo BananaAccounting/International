@@ -31,17 +31,13 @@ SUMMARY
 Saudi Arabia  VAT report -
  **/
 
-var form = [];
-
 /* Function that loads some parameters */
 function loadParam(param, banDoc, startDate, endDate) {
-	param = {
-		"scriptVersion": Banana.script.getParamLocaleValue('pubdate'),
-		"headerLeft": banDoc.info("Base", "HeaderLeft"),
-		"vatNumber": banDoc.info("AccountingDataBase", "VatNumber"),
-		"startDate": startDate,
-		"endDate": endDate,
-	};
+	param.scriptVersion = Banana.script.getParamLocaleValue('pubdate');
+	param.headerLeft = banDoc.info("Base", "HeaderLeft");
+	param.vatNumber = banDoc.info("AccountingDataBase", "VatNumber");
+	param.startDate = startDate;
+	param.endDate = endDate;
 }
 
 /* Function that loads all the description texts */
@@ -52,7 +48,7 @@ function loadText(param, banDoc) {
 	param.text.title = "VAT Report Saudi Arabia - BETA";
 	param.text.version = "Version " + param.scriptVersion + " (BETA)";
 	param.text.period = "Report Period: ";
-	param.text.vatNum = "Company VAT number:";
+	param.text.vatNum = "VAT identification number: ";
 	param.text.headerAmount = "Amount";
 	param.text.headerAdjustments = "Adjoustment";
 	param.text.headerVat = "VAT amount";
@@ -123,15 +119,10 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	var report = Banana.Report.newReport(param.reportName);
 
 	if (param.headerLeft) {
-		if (param.vatNumber) {
-			report.addParagraph(param.headerLeft + ", " + param.vatNum + " " + param.vatNumber, "");
-		} else {
-			report.addParagraph(param.headerLeft, "");
-		}
-	} else {
-		if (param.vatNumber) {
-			report.addParagraph(param.vatNum + " " + param.vatNumber, "");
-		}
+		report.addParagraph(param.headerLeft, "heading");
+	}
+	if (param.vatNumber) {
+		report.addParagraph(param.text.vatNum + " " + param.vatNumber, "heading1");
 	}
 
 	checkUsedVatCodes(param, banDoc, report);
@@ -171,7 +162,7 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	tableRow.addCell(param.text.headerCurrency, "bold center");
 	tableRow.addCell(param.text.headerCurrency, "bold center");
 	tableRow.addCell(param.text.headerCurrency, "bold center");
-	
+
 	/* 1 - Standard rated sales */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description1, "textDue");
@@ -186,7 +177,7 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	adjustmentTot = Banana.SDecimal.add(adjustmentTot, adjustment);
 	postedTotDue = Banana.SDecimal.add(postedTotDue, posted);
-	
+
 	/* 2 - Sales to customers in VAT implementing GCC countries */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description2, "textDue");
@@ -216,7 +207,7 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	}
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	adjustmentTot = Banana.SDecimal.add(adjustmentTot, adjustment);
-	
+
 	/* 4 - Exports */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description4, "textDue");
@@ -246,18 +237,19 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	}
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	adjustmentTot = Banana.SDecimal.add(adjustmentTot, adjustment);
-	
+
 	/* 6 - Total sales: */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description6, "bold textDue");
 	tableRow.addCell(formatNumber(taxableTot, true), "right totalCell");
 	tableRow.addCell(formatNumber(adjustmentTot, true), "right totalCell");
 	tableRow.addCell(formatNumber(postedTotDue, true), "right totalCell");
-	
+	tableRow = table.addRow().addCell("");
+
 	/* PURCHASE */
 	taxableTot = "";
 	adjustmentTot = "";
-	
+
 	/* 7 - Standard rated domestic purchases */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description7, "textRecoverable");
@@ -271,7 +263,7 @@ function createVatReport(param, banDoc, startDate, endDate) {
 
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	adjustmentTot = Banana.SDecimal.add(adjustmentTot, adjustment);
-	postedTotRecoverable = Banana.SDecimal.add(postedTotRecoverable, posted);	
+	postedTotRecoverable = Banana.SDecimal.add(postedTotRecoverable, posted);
 
 	/* 8 - Imports subject to VAT paid at customs */
 	tableRow = table.addRow();
@@ -286,8 +278,8 @@ function createVatReport(param, banDoc, startDate, endDate) {
 
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	adjustmentTot = Banana.SDecimal.add(adjustmentTot, adjustment);
-	postedTotRecoverable = Banana.SDecimal.add(postedTotRecoverable, posted);	
-	
+	postedTotRecoverable = Banana.SDecimal.add(postedTotRecoverable, posted);
+
 	/* 9 - Imports subject to VAT accounted for through reverse charge mechanism */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description9, "textRecoverable");
@@ -301,8 +293,8 @@ function createVatReport(param, banDoc, startDate, endDate) {
 
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	adjustmentTot = Banana.SDecimal.add(adjustmentTot, adjustment);
-	postedTotRecoverable = Banana.SDecimal.add(postedTotRecoverable, posted);	
-	
+	postedTotRecoverable = Banana.SDecimal.add(postedTotRecoverable, posted);
+
 	/* 10 - Zero rated purchases */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description10, "textRecoverable");
@@ -339,6 +331,7 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	tableRow.addCell(formatNumber(taxableTot, true), "right totalCell");
 	tableRow.addCell(formatNumber(adjustmentTot, true), "right totalCell");
 	tableRow.addCell(formatNumber(postedTotRecoverable, true), "right totalCell");
+	tableRow = table.addRow().addCell("");
 
 	/* 13 - Total due current period */
 	dueCurrentPeriod = Banana.SDecimal.subtract(postedTotDue, postedTotRecoverable);
@@ -350,7 +343,7 @@ function createVatReport(param, banDoc, startDate, endDate) {
 		// Errore
 	}
 	tableRow.addCell(formatNumber(dueCurrentPeriod, true), "right totalCell");
-	
+
 	/* 14 - Corrections from previous period (between SAR ±5,000) */
 	correctionsPreviousPeriod = getGr1VatBalance(banDoc, transactions, "14", 4, startDate, endDate);
 	tableRow = table.addRow();
@@ -366,7 +359,7 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	tableRow.addCell();
 	tableRow.addCell();
 	tableRow.addCell(formatNumber(carryForwardPreviousPeriod, true), "right dataCell");
-	
+
 	/* 16 - Net VAT due (or reclaimed): */
 	netDueOrClaim = Banana.SDecimal.add(dueCurrentPeriod, correctionsPreviousPeriod);
 	netDueOrClaim = Banana.SDecimal.add(netDueOrClaim, carryForwardPreviousPeriod);
@@ -375,7 +368,7 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	tableRow.addCell();
 	tableRow.addCell();
 	tableRow.addCell(formatNumber(netDueOrClaim, true), "right totalCell");
-	
+
 	//Add Header and footer
 	addHeader(param, report);
 	addFooter(param, report);
@@ -455,10 +448,18 @@ function checkUsedVatCodes(param, banDoc, report) {
 	}
 
 	for (var j = 0; j < usedGr1Codes.length; j++) {
-		if (usedGr1Codes[j] !== "1" && usedGr1Codes[j] !== "1A" && usedGr1Codes[j] !== "2" && usedGr1Codes[j] !== "3" &&
-			usedGr1Codes[j] !== "4" && usedGr1Codes[j] !== "5" && usedGr1Codes[j] !== "7" && usedGr1Codes[j] !== "7A" &&
-			usedGr1Codes[j] !== "8" && usedGr1Codes[j] !== "8A" && usedGr1Codes[j] !== "9" && usedGr1Codes[j] !== "9A" &&
-			usedGr1Codes[j] !== "10" && usedGr1Codes[j] !== "11" && usedGr1Codes[j] !== "14" && usedGr1Codes[j] !== "xxx") {
+		if (usedGr1Codes[j] !== "1" && usedGr1Codes[j] !== "1A" &&
+			usedGr1Codes[j] !== "2" && usedGr1Codes[j] !== "2A" &&
+			usedGr1Codes[j] !== "3" && usedGr1Codes[j] !== "3A" &&
+			usedGr1Codes[j] !== "4" && usedGr1Codes[j] !== "4A" &&
+			usedGr1Codes[j] !== "5" && usedGr1Codes[j] !== "5A" &&
+			usedGr1Codes[j] !== "7" && usedGr1Codes[j] !== "7A" &&
+			usedGr1Codes[j] !== "8" && usedGr1Codes[j] !== "8A" &&
+			usedGr1Codes[j] !== "9" && usedGr1Codes[j] !== "9A" &&
+			usedGr1Codes[j] !== "10" && usedGr1Codes[j] !== "10A" &&
+			usedGr1Codes[j] !== "11" && usedGr1Codes[j] !== "11A" &&
+			usedGr1Codes[j] !== "14" &&
+			usedGr1Codes[j] !== "xxx") {
 			report.addParagraph(param.checkVatCode1 + " '" + usedGr1Codes[j] + "' " + param.checkVatCode2, "red");
 		}
 	}
@@ -598,7 +599,7 @@ function getGr1VatBalance(banDoc, transactions, grCodes, vatClass, startDate, en
 
 	var vatCodes = getVatCodeForGr(banDoc, grCodes, 'Gr1');
 	//Banana.console.log("vatCodes: " + vatCodes);
-	
+
 	//Sum the vat amounts for the specified vat code and period
 	var currentBal = getVatCodesBalance(transactions, vatCodes, startDate, endDate);
 
@@ -622,7 +623,7 @@ function getGr1VatBalance(banDoc, transactions, grCodes, vatClass, startDate, en
 function getVatCodeForGr(banDoc, grText, grColumn) {
 
 	var str = [];
-	if (!banDoc ||!banDoc.table("VatCodes")) {
+	if (!banDoc || !banDoc.table("VatCodes")) {
 		return str;
 	}
 	var table = banDoc.table("VatCodes");
@@ -748,6 +749,7 @@ function createStyleSheet() {
 	stylesheet.addStyle(".right", "text-align:right;");
 	stylesheet.addStyle(".center", "text-align:center;");
 	stylesheet.addStyle(".heading", "font-weight:bold; font-size:16pt; text-align:left");
+	stylesheet.addStyle(".heading2", "font-weight:bold; font-size:10pt; text-align:left");
 	stylesheet.addStyle(".footer", "text-align:center; font-size:8px; font-family:Courier New;");
 	stylesheet.addStyle(".horizontalLine", "border-top:1px solid orange");
 	stylesheet.addStyle(".borderLeft", "border-left:thin solid orange");
@@ -756,7 +758,7 @@ function createStyleSheet() {
 	stylesheet.addStyle(".borderBottom", "border-bottom:thin solid orange");
 	stylesheet.addStyle(".textDue", "color:green; background-color:#d8e5d5");
 	stylesheet.addStyle(".textRecoverable", "color:green; background-color:#FFEFDB");
-	stylesheet.addStyle(".dataCell", "");	
+	stylesheet.addStyle(".dataCell", "");
 	stylesheet.addStyle(".totalCell", "background-color:#e89366");
 	stylesheet.addStyle(".textGreen", "color:green;");
 	stylesheet.addStyle(".orange", "color:orange;");
@@ -775,14 +777,6 @@ function createStyleSheet() {
 	stylesheet.addStyle(".col3", ""); //width:12%
 	stylesheet.addStyle(".col4", "");
 	stylesheet.addStyle(".col5", ""); //width:12%
-	stylesheet.addStyle(".col6", "");
-	stylesheet.addStyle(".col7", "");
-	stylesheet.addStyle(".col8", "");
-	stylesheet.addStyle(".col9", ""); //width:12%
-	stylesheet.addStyle(".col10", "");
-	stylesheet.addStyle(".col11", "");
-	stylesheet.addStyle(".col12", ""); //width:12%
-	stylesheet.addStyle(".col13", "");
 
 	/* TableII */
 	var tableStyle = stylesheet.addStyle("tableII");
