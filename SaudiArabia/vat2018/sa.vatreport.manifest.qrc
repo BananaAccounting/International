@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+ <qresource>
+ 	<file alias="manifest.json">sa.vatreport.manifest.json</file>
+ 	<file>sa.vatreport.2018.js</file>
+ </qresource>
+ </RCC>
