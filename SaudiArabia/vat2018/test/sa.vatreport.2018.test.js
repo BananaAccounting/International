@@ -84,7 +84,7 @@ ReportSAVAT2018Test.prototype.testIncomeExpenses = function() {
 
   var fileAC2 = "file:script/../test/testcases/vat-income-expenses.ac2";
   var banDoc = Banana.application.openDocument(fileAC2);
-  Banana.console.log("bandoc : " + banDoc);
+  //Banana.console.log("bandoc : " + banDoc);
   if (!banDoc) {return;}
 
   Test.logger.addSection("Actual");
@@ -110,7 +110,7 @@ ReportSAVAT2018Test.prototype.testIncomeExpenses = function() {
   aggiungiReport(banDoc, "2018-10-01", "2018-12-31", "Fourth quarter report");
   
   //Test January
-  Test.logger.addSubSection("Fourth quarter report");
+  Test.logger.addSubSection("January report");
   aggiungiReport(banDoc, "2018-01-01", "2018-01-31", "January report");
   }
 
@@ -118,7 +118,7 @@ ReportSAVAT2018Test.prototype.testDoubleEntry = function() {
    
   Test.logger.addComment("Test vatreport_ef1q2018_doubleentry");
 
-  var fileAC2 = "file:script/../test/testcases/vat-double.ac2";
+  var fileAC2 = "file:script/../test/testcases/vat-double-accrual.ac2";
   var banDoc = Banana.application.openDocument(fileAC2);
   Banana.console.log("bandoc : " + banDoc);
   if (!banDoc) {return;}
@@ -146,7 +146,7 @@ ReportSAVAT2018Test.prototype.testDoubleEntry = function() {
   aggiungiReport(banDoc, "2018-10-01", "2018-12-31", "Fourth quarter report");
   
   //Test January
-  Test.logger.addSubSection("Fourth quarter report");
+  Test.logger.addSubSection("January report");
   aggiungiReport(banDoc, "2018-01-01", "2018-01-31", "January report");
   
 }

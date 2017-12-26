@@ -2,7 +2,7 @@
 %%info_test_app{Banana90}{9.0.1}
 %%info_test_os{Windows 10 (10.0)}
 %%info_test_qt{5.9.3}
-%%info_test_date{2017-12-26}{12:00:32.155}
+%%info_test_date{2017-12-26}{17:37:45.668}
 \documentclass{report}
 \usepackage{color}
 \usepackage{adjustbox}
@@ -25,89 +25,72 @@
 \section{Actual}
 \subsection{Whole year report}
 \begin{reportvalue}{Whole year report}
-\\
-\\
+Saudi Arabia Small Company \\
+VAT identification number:  123456789012345 \\
   \\
-undefined '2A' undefined \\
-undefined '3A' undefined \\
-undefined '4A' undefined \\
-undefined '5A' undefined \\
-undefined '10A' undefined \\
-undefined '11A' undefined \\
-  \\
-Report Period: 01.01.2018 - 31.12.2018 \\
+VAT Return Form \\
 \begin{tabular}{ l  l  l  l }
- & Amount  & Adjoustment  & VAT amount \\
+Report Period: 01.01.2018 - 31.12.2018  & Amount  & Adjoustment  & VAT amount \\
  & (SAD)  & (SAD)  & (SAD) \\
-- 1 Stanadard rated Sales  & 10'945.00  & 1'100.00  & 492.25 \\
-– 2 Sales to customers in VAT implementing GCC countries  & 120.00  & 12.00  & \\
-- 3 Zero rated domestic sales  & 130.00  & 13.00  & \\
-- 4 Exports:  & 140.00  & 14.00  & \\
-- 5 Exempt sales:  & 150.00  & 15.00  & \\
-- 6 Total sales  & 11'485.00  & 1'154.00  & 492.25 \\
+- 1 Stanadard rated Sales  & 10'900.00  & 1'100.00  & 490.00 \\
+– 2 Sales to customers in VAT implementing GCC countries  & 200.00  & 20.00  & \\
+- 3 Zero rated domestic sales  & 300.00  & 30.00  & \\
+- 4 Exports:  & 400.00  & 40.00  & \\
+- 5 Exempt sales:  & 500.00  & 50.00  & \\
+- 6 Total sales  & 12'300.00  & 1'240.00  & 490.00 \\
+\\
 - 7 Standard rated domestic purchases  & 700.00  & 70.00  & 31.50 \\
 - 8 Imports subject to VAT paid at customs  & 800.00  & 80.00  & 36.00 \\
-- 9 Imports subject to VAT accounted for through reverse charge mechanism  & 94.50  & 100.00  & -0.27 \\
-- 10 Zero rated purchases  & 510.00  & 51.00  & \\
-- 11 Exempt purchases:  & 511.00  & 51.10  & \\
-- 12 Total purchases  & 2'615.50  & 352.10  & 67.23 \\
-- 13 Total VAT due for the current period  &  &  & 425.02 \\
-- 14 Corrections from previous period (between SAR ±5,000)  &  &  & 14.86 \\
+- 9 Imports subject to VAT accounted for through reverse charge mechanism  & 900.00  & 100.00  & 40.00 \\
+- 10 Zero rated purchases  & 1'000.00  & 100.00  & \\
+- 11 Exempt purchases:  & 1'100.00  & 110.00  & \\
+- 12 Total purchases  & 4'500.00  & 460.00  & 107.50 \\
+\\
+- 13 Total VAT due for the current period  &  &  & 382.50 \\
+- 14 Corrections from previous period (between SAR ±5,000)  &  &  & 14.50 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  & 0.00 \\
-- 16 Net VAT due (or reclaimed)  &  &  & 439.88 \\
+- 16 Net VAT due (or reclaimed)  &  &  & 397.00 \\
 \end{tabular}
 \excltest{26.12.2017 - } 
 \end{reportvalue}
 \subsection{First quarter report}
 \begin{reportvalue}{First quarter report}
-\\
-\\
+Saudi Arabia Small Company \\
+VAT identification number:  123456789012345 \\
   \\
-undefined '2A' undefined \\
-undefined '3A' undefined \\
-undefined '4A' undefined \\
-undefined '5A' undefined \\
-undefined '10A' undefined \\
-undefined '11A' undefined \\
-  \\
-Report Period: 01.01.2018 - 31.03.2018 \\
+VAT Return Form \\
 \begin{tabular}{ l  l  l  l }
- & Amount  & Adjoustment  & VAT amount \\
+Report Period: 01.01.2018 - 31.03.2018  & Amount  & Adjoustment  & VAT amount \\
  & (SAD)  & (SAD)  & (SAD) \\
-- 1 Stanadard rated Sales  & 10'945.00  & 1'100.00  & 492.25 \\
-– 2 Sales to customers in VAT implementing GCC countries  & 120.00  & 12.00  & \\
-- 3 Zero rated domestic sales  & 130.00  & 13.00  & \\
-- 4 Exports:  & 140.00  & 14.00  & \\
-- 5 Exempt sales:  & 150.00  & 15.00  & \\
-- 6 Total sales  & 11'485.00  & 1'154.00  & 492.25 \\
+- 1 Stanadard rated Sales  & 10'900.00  & 1'100.00  & 490.00 \\
+– 2 Sales to customers in VAT implementing GCC countries  & 200.00  & 20.00  & \\
+- 3 Zero rated domestic sales  & 300.00  & 30.00  & \\
+- 4 Exports:  & 400.00  & 40.00  & \\
+- 5 Exempt sales:  & 500.00  & 50.00  & \\
+- 6 Total sales  & 12'300.00  & 1'240.00  & 490.00 \\
+\\
 - 7 Standard rated domestic purchases  & 700.00  & 70.00  & 31.50 \\
 - 8 Imports subject to VAT paid at customs  & 800.00  & 80.00  & 36.00 \\
-- 9 Imports subject to VAT accounted for through reverse charge mechanism  & 94.50  & 100.00  & -0.27 \\
-- 10 Zero rated purchases  & 510.00  & 51.00  & \\
-- 11 Exempt purchases:  & 511.00  & 51.10  & \\
-- 12 Total purchases  & 2'615.50  & 352.10  & 67.23 \\
-- 13 Total VAT due for the current period  &  &  & 425.02 \\
-- 14 Corrections from previous period (between SAR ±5,000)  &  &  & 14.86 \\
+- 9 Imports subject to VAT accounted for through reverse charge mechanism  & 900.00  & 100.00  & 40.00 \\
+- 10 Zero rated purchases  & 1'000.00  & 100.00  & \\
+- 11 Exempt purchases:  & 1'100.00  & 110.00  & \\
+- 12 Total purchases  & 4'500.00  & 460.00  & 107.50 \\
+\\
+- 13 Total VAT due for the current period  &  &  & 382.50 \\
+- 14 Corrections from previous period (between SAR ±5,000)  &  &  & 14.50 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  & 0.00 \\
-- 16 Net VAT due (or reclaimed)  &  &  & 439.88 \\
+- 16 Net VAT due (or reclaimed)  &  &  & 397.00 \\
 \end{tabular}
 \excltest{26.12.2017 - } 
 \end{reportvalue}
 \subsection{Second quarter report}
 \begin{reportvalue}{Second quarter report}
-\\
-\\
+Saudi Arabia Small Company \\
+VAT identification number:  123456789012345 \\
   \\
-undefined '2A' undefined \\
-undefined '3A' undefined \\
-undefined '4A' undefined \\
-undefined '5A' undefined \\
-undefined '10A' undefined \\
-undefined '11A' undefined \\
-  \\
-Report Period: 01.04.2018 - 30.06.2018 \\
+VAT Return Form \\
 \begin{tabular}{ l  l  l  l }
- & Amount  & Adjoustment  & VAT amount \\
+Report Period: 01.04.2018 - 30.06.2018  & Amount  & Adjoustment  & VAT amount \\
  & (SAD)  & (SAD)  & (SAD) \\
 - 1 Stanadard rated Sales  &  &  & \\
 – 2 Sales to customers in VAT implementing GCC countries  &  &  & \\
@@ -115,12 +98,14 @@ Report Period: 01.04.2018 - 30.06.2018 \\
 - 4 Exports:  &  &  & \\
 - 5 Exempt sales:  &  &  & \\
 - 6 Total sales  & 0.00  & 0.00  & 0.00 \\
+\\
 - 7 Standard rated domestic purchases  &  & 0.00  & \\
 - 8 Imports subject to VAT paid at customs  &  & 0.00  & \\
 - 9 Imports subject to VAT accounted for through reverse charge mechanism  &  & 0.00  & \\
 - 10 Zero rated purchases  &  &  & \\
 - 11 Exempt purchases:  &  &  & \\
 - 12 Total purchases  & 0.00  & 0.00  & 0.00 \\
+\\
 - 13 Total VAT due for the current period  &  &  & 0.00 \\
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  & 0.00 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  & 0.00 \\
@@ -130,19 +115,12 @@ Report Period: 01.04.2018 - 30.06.2018 \\
 \end{reportvalue}
 \subsection{Third quarter report}
 \begin{reportvalue}{Third quarter report}
-\\
-\\
+Saudi Arabia Small Company \\
+VAT identification number:  123456789012345 \\
   \\
-undefined '2A' undefined \\
-undefined '3A' undefined \\
-undefined '4A' undefined \\
-undefined '5A' undefined \\
-undefined '10A' undefined \\
-undefined '11A' undefined \\
-  \\
-Report Period: 01.07.2018 - 30.09.2018 \\
+VAT Return Form \\
 \begin{tabular}{ l  l  l  l }
- & Amount  & Adjoustment  & VAT amount \\
+Report Period: 01.07.2018 - 30.09.2018  & Amount  & Adjoustment  & VAT amount \\
  & (SAD)  & (SAD)  & (SAD) \\
 - 1 Stanadard rated Sales  &  &  & \\
 – 2 Sales to customers in VAT implementing GCC countries  &  &  & \\
@@ -150,12 +128,14 @@ Report Period: 01.07.2018 - 30.09.2018 \\
 - 4 Exports:  &  &  & \\
 - 5 Exempt sales:  &  &  & \\
 - 6 Total sales  & 0.00  & 0.00  & 0.00 \\
+\\
 - 7 Standard rated domestic purchases  &  & 0.00  & \\
 - 8 Imports subject to VAT paid at customs  &  & 0.00  & \\
 - 9 Imports subject to VAT accounted for through reverse charge mechanism  &  & 0.00  & \\
 - 10 Zero rated purchases  &  &  & \\
 - 11 Exempt purchases:  &  &  & \\
 - 12 Total purchases  & 0.00  & 0.00  & 0.00 \\
+\\
 - 13 Total VAT due for the current period  &  &  & 0.00 \\
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  & 0.00 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  & 0.00 \\
@@ -165,19 +145,12 @@ Report Period: 01.07.2018 - 30.09.2018 \\
 \end{reportvalue}
 \subsection{Fourth quarter report}
 \begin{reportvalue}{Fourth quarter report}
-\\
-\\
+Saudi Arabia Small Company \\
+VAT identification number:  123456789012345 \\
   \\
-undefined '2A' undefined \\
-undefined '3A' undefined \\
-undefined '4A' undefined \\
-undefined '5A' undefined \\
-undefined '10A' undefined \\
-undefined '11A' undefined \\
-  \\
-Report Period: 01.10.2018 - 31.12.2018 \\
+VAT Return Form \\
 \begin{tabular}{ l  l  l  l }
- & Amount  & Adjoustment  & VAT amount \\
+Report Period: 01.10.2018 - 31.12.2018  & Amount  & Adjoustment  & VAT amount \\
  & (SAD)  & (SAD)  & (SAD) \\
 - 1 Stanadard rated Sales  &  &  & \\
 – 2 Sales to customers in VAT implementing GCC countries  &  &  & \\
@@ -185,12 +158,14 @@ Report Period: 01.10.2018 - 31.12.2018 \\
 - 4 Exports:  &  &  & \\
 - 5 Exempt sales:  &  &  & \\
 - 6 Total sales  & 0.00  & 0.00  & 0.00 \\
+\\
 - 7 Standard rated domestic purchases  &  & 0.00  & \\
 - 8 Imports subject to VAT paid at customs  &  & 0.00  & \\
 - 9 Imports subject to VAT accounted for through reverse charge mechanism  &  & 0.00  & \\
 - 10 Zero rated purchases  &  &  & \\
 - 11 Exempt purchases:  &  &  & \\
 - 12 Total purchases  & 0.00  & 0.00  & 0.00 \\
+\\
 - 13 Total VAT due for the current period  &  &  & 0.00 \\
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  & 0.00 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  & 0.00 \\
@@ -198,132 +173,110 @@ Report Period: 01.10.2018 - 31.12.2018 \\
 \end{tabular}
 \excltest{26.12.2017 - } 
 \end{reportvalue}
-\subsection{Fourth quarter report}
+\subsection{January report}
 \begin{reportvalue}{January report}
-\\
-\\
+Saudi Arabia Small Company \\
+VAT identification number:  123456789012345 \\
   \\
-undefined '2A' undefined \\
-undefined '3A' undefined \\
-undefined '4A' undefined \\
-undefined '5A' undefined \\
-undefined '10A' undefined \\
-undefined '11A' undefined \\
-  \\
-Report Period: 01.01.2018 - 31.01.2018 \\
+VAT Return Form \\
 \begin{tabular}{ l  l  l  l }
- & Amount  & Adjoustment  & VAT amount \\
+Report Period: 01.01.2018 - 31.01.2018  & Amount  & Adjoustment  & VAT amount \\
  & (SAD)  & (SAD)  & (SAD) \\
-- 1 Stanadard rated Sales  & 10'945.00  & 1'100.00  & 492.25 \\
-– 2 Sales to customers in VAT implementing GCC countries  & 120.00  & 12.00  & \\
-- 3 Zero rated domestic sales  & 130.00  & 13.00  & \\
-- 4 Exports:  & 140.00  & 14.00  & \\
-- 5 Exempt sales:  & 150.00  & 15.00  & \\
-- 6 Total sales  & 11'485.00  & 1'154.00  & 492.25 \\
+- 1 Stanadard rated Sales  & 10'900.00  & 1'100.00  & 490.00 \\
+– 2 Sales to customers in VAT implementing GCC countries  & 200.00  & 20.00  & \\
+- 3 Zero rated domestic sales  & 300.00  & 30.00  & \\
+- 4 Exports:  & 400.00  & 40.00  & \\
+- 5 Exempt sales:  & 500.00  & 50.00  & \\
+- 6 Total sales  & 12'300.00  & 1'240.00  & 490.00 \\
+\\
 - 7 Standard rated domestic purchases  & 700.00  & 70.00  & 31.50 \\
 - 8 Imports subject to VAT paid at customs  & 800.00  & 80.00  & 36.00 \\
-- 9 Imports subject to VAT accounted for through reverse charge mechanism  & 94.50  & 100.00  & -0.27 \\
-- 10 Zero rated purchases  & 510.00  & 51.00  & \\
-- 11 Exempt purchases:  & 511.00  & 51.10  & \\
-- 12 Total purchases  & 2'615.50  & 352.10  & 67.23 \\
-- 13 Total VAT due for the current period  &  &  & 425.02 \\
-- 14 Corrections from previous period (between SAR ±5,000)  &  &  & 14.86 \\
+- 9 Imports subject to VAT accounted for through reverse charge mechanism  & 900.00  & 100.00  & 40.00 \\
+- 10 Zero rated purchases  & 1'000.00  & 100.00  & \\
+- 11 Exempt purchases:  & 1'100.00  & 110.00  & \\
+- 12 Total purchases  & 4'500.00  & 460.00  & 107.50 \\
+\\
+- 13 Total VAT due for the current period  &  &  & 382.50 \\
+- 14 Corrections from previous period (between SAR ±5,000)  &  &  & 14.50 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  & 0.00 \\
-- 16 Net VAT due (or reclaimed)  &  &  & 439.88 \\
+- 16 Net VAT due (or reclaimed)  &  &  & 397.00 \\
 \end{tabular}
 \excltest{26.12.2017 - } 
 \end{reportvalue}
 \keyvalue{Result}{Passed}
-%%info_test_time_elapsed{00:00:03.157}
+%%info_test_time_elapsed{00:00:03.187}
 \end{test}
 \begin{test}{testDoubleEntry}
 %Test vatreport_ef1q2018_doubleentry
 \section{Actual}
 \subsection{Whole year report}
 \begin{reportvalue}{Whole year report}
-\\
-\\
+Saudi Arabia Company Ltd \\
+VAT identification number:  123456789012345 \\
   \\
-undefined '2A' undefined \\
-undefined '3A' undefined \\
-undefined '4A' undefined \\
-undefined '5A' undefined \\
-undefined '10A' undefined \\
-undefined '11A' undefined \\
-  \\
-Report Period: 01.01.2018 - 31.12.2018 \\
+VAT Return Form \\
 \begin{tabular}{ l  l  l  l }
- & Amount  & Adjoustment  & VAT amount \\
+Report Period: 01.01.2018 - 31.12.2018  & Amount  & Adjoustment  & VAT amount \\
  & (SAD)  & (SAD)  & (SAD) \\
-- 1 Stanadard rated Sales  & 10'945.00  & 1'100.00  & 492.25 \\
-– 2 Sales to customers in VAT implementing GCC countries  & 120.00  & 12.00  & \\
-- 3 Zero rated domestic sales  & 130.00  & 13.00  & \\
-- 4 Exports:  & 140.00  & 14.00  & \\
-- 5 Exempt sales:  & 150.00  & 15.00  & \\
-- 6 Total sales  & 11'485.00  & 1'154.00  & 492.25 \\
+- 1 Stanadard rated Sales  & 10'900.00  & 1'100.00  & 490.00 \\
+– 2 Sales to customers in VAT implementing GCC countries  & 200.00  & 20.00  & \\
+- 3 Zero rated domestic sales  & 300.00  & 30.00  & \\
+- 4 Exports:  & 400.00  & 40.00  & \\
+- 5 Exempt sales:  & 500.00  & 50.00  & \\
+- 6 Total sales  & 12'300.00  & 1'240.00  & 490.00 \\
+\\
 - 7 Standard rated domestic purchases  & 700.00  & 70.00  & 31.50 \\
 - 8 Imports subject to VAT paid at customs  & 800.00  & 80.00  & 36.00 \\
-- 9 Imports subject to VAT accounted for through reverse charge mechanism  & 94.50  & 100.00  & -0.27 \\
-- 10 Zero rated purchases  & 510.00  & 51.00  & \\
-- 11 Exempt purchases:  & 511.00  & 51.10  & \\
-- 12 Total purchases  & 2'615.50  & 352.10  & 67.23 \\
-- 13 Total VAT due for the current period  &  &  & 425.02 \\
-- 14 Corrections from previous period (between SAR ±5,000)  &  &  & 14.86 \\
+- 9 Imports subject to VAT accounted for through reverse charge mechanism  & 900.00  & 100.00  & 40.00 \\
+- 10 Zero rated purchases  & 1'000.00  & 100.00  & \\
+- 11 Exempt purchases:  & 1'100.00  & 110.00  & \\
+- 12 Total purchases  & 4'500.00  & 460.00  & 107.50 \\
+\\
+- 13 Total VAT due for the current period  &  &  & 382.50 \\
+- 14 Corrections from previous period (between SAR ±5,000)  &  &  & 14.50 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  & 0.00 \\
-- 16 Net VAT due (or reclaimed)  &  &  & 439.88 \\
+- 16 Net VAT due (or reclaimed)  &  &  & 397.00 \\
 \end{tabular}
 \excltest{26.12.2017 - } 
 \end{reportvalue}
 \subsection{First quarter report}
 \begin{reportvalue}{First quarter report}
-\\
-\\
+Saudi Arabia Company Ltd \\
+VAT identification number:  123456789012345 \\
   \\
-undefined '2A' undefined \\
-undefined '3A' undefined \\
-undefined '4A' undefined \\
-undefined '5A' undefined \\
-undefined '10A' undefined \\
-undefined '11A' undefined \\
-  \\
-Report Period: 01.01.2018 - 31.03.2018 \\
+VAT Return Form \\
 \begin{tabular}{ l  l  l  l }
- & Amount  & Adjoustment  & VAT amount \\
+Report Period: 01.01.2018 - 31.03.2018  & Amount  & Adjoustment  & VAT amount \\
  & (SAD)  & (SAD)  & (SAD) \\
-- 1 Stanadard rated Sales  & 10'945.00  & 1'100.00  & 492.25 \\
-– 2 Sales to customers in VAT implementing GCC countries  & 120.00  & 12.00  & \\
-- 3 Zero rated domestic sales  & 130.00  & 13.00  & \\
-- 4 Exports:  & 140.00  & 14.00  & \\
-- 5 Exempt sales:  & 150.00  & 15.00  & \\
-- 6 Total sales  & 11'485.00  & 1'154.00  & 492.25 \\
+- 1 Stanadard rated Sales  & 10'900.00  & 1'100.00  & 490.00 \\
+– 2 Sales to customers in VAT implementing GCC countries  & 200.00  & 20.00  & \\
+- 3 Zero rated domestic sales  & 300.00  & 30.00  & \\
+- 4 Exports:  & 400.00  & 40.00  & \\
+- 5 Exempt sales:  & 500.00  & 50.00  & \\
+- 6 Total sales  & 12'300.00  & 1'240.00  & 490.00 \\
+\\
 - 7 Standard rated domestic purchases  & 700.00  & 70.00  & 31.50 \\
 - 8 Imports subject to VAT paid at customs  & 800.00  & 80.00  & 36.00 \\
-- 9 Imports subject to VAT accounted for through reverse charge mechanism  & 94.50  & 100.00  & -0.27 \\
-- 10 Zero rated purchases  & 510.00  & 51.00  & \\
-- 11 Exempt purchases:  & 511.00  & 51.10  & \\
-- 12 Total purchases  & 2'615.50  & 352.10  & 67.23 \\
-- 13 Total VAT due for the current period  &  &  & 425.02 \\
-- 14 Corrections from previous period (between SAR ±5,000)  &  &  & 14.86 \\
+- 9 Imports subject to VAT accounted for through reverse charge mechanism  & 900.00  & 100.00  & 40.00 \\
+- 10 Zero rated purchases  & 1'000.00  & 100.00  & \\
+- 11 Exempt purchases:  & 1'100.00  & 110.00  & \\
+- 12 Total purchases  & 4'500.00  & 460.00  & 107.50 \\
+\\
+- 13 Total VAT due for the current period  &  &  & 382.50 \\
+- 14 Corrections from previous period (between SAR ±5,000)  &  &  & 14.50 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  & 0.00 \\
-- 16 Net VAT due (or reclaimed)  &  &  & 439.88 \\
+- 16 Net VAT due (or reclaimed)  &  &  & 397.00 \\
 \end{tabular}
 \excltest{26.12.2017 - } 
 \end{reportvalue}
 \subsection{Second quarter report}
 \begin{reportvalue}{Second quarter report}
-\\
-\\
+Saudi Arabia Company Ltd \\
+VAT identification number:  123456789012345 \\
   \\
-undefined '2A' undefined \\
-undefined '3A' undefined \\
-undefined '4A' undefined \\
-undefined '5A' undefined \\
-undefined '10A' undefined \\
-undefined '11A' undefined \\
-  \\
-Report Period: 01.04.2018 - 30.06.2018 \\
+VAT Return Form \\
 \begin{tabular}{ l  l  l  l }
- & Amount  & Adjoustment  & VAT amount \\
+Report Period: 01.04.2018 - 30.06.2018  & Amount  & Adjoustment  & VAT amount \\
  & (SAD)  & (SAD)  & (SAD) \\
 - 1 Stanadard rated Sales  &  &  & \\
 – 2 Sales to customers in VAT implementing GCC countries  &  &  & \\
@@ -331,12 +284,14 @@ Report Period: 01.04.2018 - 30.06.2018 \\
 - 4 Exports:  &  &  & \\
 - 5 Exempt sales:  &  &  & \\
 - 6 Total sales  & 0.00  & 0.00  & 0.00 \\
+\\
 - 7 Standard rated domestic purchases  &  & 0.00  & \\
 - 8 Imports subject to VAT paid at customs  &  & 0.00  & \\
 - 9 Imports subject to VAT accounted for through reverse charge mechanism  &  & 0.00  & \\
 - 10 Zero rated purchases  &  &  & \\
 - 11 Exempt purchases:  &  &  & \\
 - 12 Total purchases  & 0.00  & 0.00  & 0.00 \\
+\\
 - 13 Total VAT due for the current period  &  &  & 0.00 \\
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  & 0.00 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  & 0.00 \\
@@ -346,19 +301,12 @@ Report Period: 01.04.2018 - 30.06.2018 \\
 \end{reportvalue}
 \subsection{Third quarter report}
 \begin{reportvalue}{Third quarter report}
-\\
-\\
+Saudi Arabia Company Ltd \\
+VAT identification number:  123456789012345 \\
   \\
-undefined '2A' undefined \\
-undefined '3A' undefined \\
-undefined '4A' undefined \\
-undefined '5A' undefined \\
-undefined '10A' undefined \\
-undefined '11A' undefined \\
-  \\
-Report Period: 01.07.2018 - 30.09.2018 \\
+VAT Return Form \\
 \begin{tabular}{ l  l  l  l }
- & Amount  & Adjoustment  & VAT amount \\
+Report Period: 01.07.2018 - 30.09.2018  & Amount  & Adjoustment  & VAT amount \\
  & (SAD)  & (SAD)  & (SAD) \\
 - 1 Stanadard rated Sales  &  &  & \\
 – 2 Sales to customers in VAT implementing GCC countries  &  &  & \\
@@ -366,12 +314,14 @@ Report Period: 01.07.2018 - 30.09.2018 \\
 - 4 Exports:  &  &  & \\
 - 5 Exempt sales:  &  &  & \\
 - 6 Total sales  & 0.00  & 0.00  & 0.00 \\
+\\
 - 7 Standard rated domestic purchases  &  & 0.00  & \\
 - 8 Imports subject to VAT paid at customs  &  & 0.00  & \\
 - 9 Imports subject to VAT accounted for through reverse charge mechanism  &  & 0.00  & \\
 - 10 Zero rated purchases  &  &  & \\
 - 11 Exempt purchases:  &  &  & \\
 - 12 Total purchases  & 0.00  & 0.00  & 0.00 \\
+\\
 - 13 Total VAT due for the current period  &  &  & 0.00 \\
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  & 0.00 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  & 0.00 \\
@@ -381,19 +331,12 @@ Report Period: 01.07.2018 - 30.09.2018 \\
 \end{reportvalue}
 \subsection{Fourth quarter report}
 \begin{reportvalue}{Fourth quarter report}
-\\
-\\
+Saudi Arabia Company Ltd \\
+VAT identification number:  123456789012345 \\
   \\
-undefined '2A' undefined \\
-undefined '3A' undefined \\
-undefined '4A' undefined \\
-undefined '5A' undefined \\
-undefined '10A' undefined \\
-undefined '11A' undefined \\
-  \\
-Report Period: 01.10.2018 - 31.12.2018 \\
+VAT Return Form \\
 \begin{tabular}{ l  l  l  l }
- & Amount  & Adjoustment  & VAT amount \\
+Report Period: 01.10.2018 - 31.12.2018  & Amount  & Adjoustment  & VAT amount \\
  & (SAD)  & (SAD)  & (SAD) \\
 - 1 Stanadard rated Sales  &  &  & \\
 – 2 Sales to customers in VAT implementing GCC countries  &  &  & \\
@@ -401,12 +344,14 @@ Report Period: 01.10.2018 - 31.12.2018 \\
 - 4 Exports:  &  &  & \\
 - 5 Exempt sales:  &  &  & \\
 - 6 Total sales  & 0.00  & 0.00  & 0.00 \\
+\\
 - 7 Standard rated domestic purchases  &  & 0.00  & \\
 - 8 Imports subject to VAT paid at customs  &  & 0.00  & \\
 - 9 Imports subject to VAT accounted for through reverse charge mechanism  &  & 0.00  & \\
 - 10 Zero rated purchases  &  &  & \\
 - 11 Exempt purchases:  &  &  & \\
 - 12 Total purchases  & 0.00  & 0.00  & 0.00 \\
+\\
 - 13 Total VAT due for the current period  &  &  & 0.00 \\
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  & 0.00 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  & 0.00 \\
@@ -414,45 +359,40 @@ Report Period: 01.10.2018 - 31.12.2018 \\
 \end{tabular}
 \excltest{26.12.2017 - } 
 \end{reportvalue}
-\subsection{Fourth quarter report}
+\subsection{January report}
 \begin{reportvalue}{January report}
-\\
-\\
+Saudi Arabia Company Ltd \\
+VAT identification number:  123456789012345 \\
   \\
-undefined '2A' undefined \\
-undefined '3A' undefined \\
-undefined '4A' undefined \\
-undefined '5A' undefined \\
-undefined '10A' undefined \\
-undefined '11A' undefined \\
-  \\
-Report Period: 01.01.2018 - 31.01.2018 \\
+VAT Return Form \\
 \begin{tabular}{ l  l  l  l }
- & Amount  & Adjoustment  & VAT amount \\
+Report Period: 01.01.2018 - 31.01.2018  & Amount  & Adjoustment  & VAT amount \\
  & (SAD)  & (SAD)  & (SAD) \\
-- 1 Stanadard rated Sales  & 10'945.00  & 1'100.00  & 492.25 \\
-– 2 Sales to customers in VAT implementing GCC countries  & 120.00  & 12.00  & \\
-- 3 Zero rated domestic sales  & 130.00  & 13.00  & \\
-- 4 Exports:  & 140.00  & 14.00  & \\
-- 5 Exempt sales:  & 150.00  & 15.00  & \\
-- 6 Total sales  & 11'485.00  & 1'154.00  & 492.25 \\
+- 1 Stanadard rated Sales  & 10'900.00  & 1'100.00  & 490.00 \\
+– 2 Sales to customers in VAT implementing GCC countries  & 200.00  & 20.00  & \\
+- 3 Zero rated domestic sales  & 300.00  & 30.00  & \\
+- 4 Exports:  & 400.00  & 40.00  & \\
+- 5 Exempt sales:  & 500.00  & 50.00  & \\
+- 6 Total sales  & 12'300.00  & 1'240.00  & 490.00 \\
+\\
 - 7 Standard rated domestic purchases  & 700.00  & 70.00  & 31.50 \\
 - 8 Imports subject to VAT paid at customs  & 800.00  & 80.00  & 36.00 \\
-- 9 Imports subject to VAT accounted for through reverse charge mechanism  & 94.50  & 100.00  & -0.27 \\
-- 10 Zero rated purchases  & 510.00  & 51.00  & \\
-- 11 Exempt purchases:  & 511.00  & 51.10  & \\
-- 12 Total purchases  & 2'615.50  & 352.10  & 67.23 \\
-- 13 Total VAT due for the current period  &  &  & 425.02 \\
-- 14 Corrections from previous period (between SAR ±5,000)  &  &  & 14.86 \\
+- 9 Imports subject to VAT accounted for through reverse charge mechanism  & 900.00  & 100.00  & 40.00 \\
+- 10 Zero rated purchases  & 1'000.00  & 100.00  & \\
+- 11 Exempt purchases:  & 1'100.00  & 110.00  & \\
+- 12 Total purchases  & 4'500.00  & 460.00  & 107.50 \\
+\\
+- 13 Total VAT due for the current period  &  &  & 382.50 \\
+- 14 Corrections from previous period (between SAR ±5,000)  &  &  & 14.50 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  & 0.00 \\
-- 16 Net VAT due (or reclaimed)  &  &  & 439.88 \\
+- 16 Net VAT due (or reclaimed)  &  &  & 397.00 \\
 \end{tabular}
 \excltest{26.12.2017 - } 
 \end{reportvalue}
 \keyvalue{Result}{Passed}
-%%info_test_time_elapsed{00:00:03.303}
+%%info_test_time_elapsed{00:00:03.359}
 \end{test}
-%%info_test_time_elapsed{00:00:06.460}
+%%info_test_time_elapsed{00:00:06.546}
 \end{testcase}
-%%info_test_time_elapsed{00:00:06.830}
+%%info_test_time_elapsed{00:00:06.915}
 \end{document}

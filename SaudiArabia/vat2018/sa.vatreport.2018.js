@@ -45,7 +45,7 @@ function loadText(param, banDoc) {
 	var lan = banDoc.info("Base", "Language");
 	param.text = {};
 	param.text.reportName = "VAT Report Saudi Arabia";
-	param.text.title = "VAT Report Saudi Arabia - BETA";
+	param.text.title = "VAT Return Form";
 	param.text.version = "Version " + param.scriptVersion + " (BETA)";
 	param.text.period = "Report Period: ";
 	param.text.vatNum = "VAT identification number: ";
@@ -119,17 +119,18 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	var report = Banana.Report.newReport(param.reportName);
 
 	if (param.headerLeft) {
-		report.addParagraph(param.headerLeft, "heading");
+		report.addParagraph(param.headerLeft, "heading2");
 	}
 	if (param.vatNumber) {
-		report.addParagraph(param.text.vatNum + " " + param.vatNumber, "heading1");
+		report.addParagraph(param.text.vatNum + " " + param.vatNumber, "heading3");
 	}
 
 	checkUsedVatCodes(param, banDoc, report);
 	checkUsedVatCodesHaveGr1(banDoc, report);
 
 	report.addParagraph(" ", "");
-	report.addParagraph(param.text.period + Banana.Converter.toLocaleDateFormat(startDate) + " - " + Banana.Converter.toLocaleDateFormat(endDate), "bold");
+	report.addParagraph(param.text.title, "heading1 textGreen");
+	
 
 	var table = report.addTable("tableI");
 	var col1 = table.addColumn("col1");
@@ -153,7 +154,7 @@ function createVatReport(param, banDoc, startDate, endDate) {
 
 	/* Header  */
 	tableRow = table.addRow();
-	tableRow.addCell();
+	tableRow.addCell(param.text.period + Banana.Converter.toLocaleDateFormat(startDate) + " - " + Banana.Converter.toLocaleDateFormat(endDate), "bold");
 	tableRow.addCell(param.text.headerAmount, "bold center");
 	tableRow.addCell(param.text.headerAdjustments, "bold center");
 	tableRow.addCell(param.text.headerVat, "bold center");
@@ -733,9 +734,9 @@ function addFooter(param, report) {
 function addHeader(param, report) {
 	var pageHeader = report.getHeader();
 	pageHeader.addClass("header");
-	pageHeader.addParagraph(param.title, "heading");
-	pageHeader.addParagraph(param.version, "");
-	pageHeader.addParagraph(" ", "");
+	//pageHeader.addParagraph(param.text.title, "heading");
+	//pageHeader.addParagraph(param.version, "");
+	//pageHeader.addParagraph(" ", "");
 }
 
 /* Function that creates all the styles used to print the report */
@@ -748,19 +749,20 @@ function createStyleSheet() {
 	stylesheet.addStyle(".bold", "font-weight:bold;");
 	stylesheet.addStyle(".right", "text-align:right;");
 	stylesheet.addStyle(".center", "text-align:center;");
-	stylesheet.addStyle(".heading", "font-weight:bold; font-size:16pt; text-align:left");
-	stylesheet.addStyle(".heading2", "font-weight:bold; font-size:10pt; text-align:left");
+	stylesheet.addStyle(".heading1", "font-weight:bold; font-size:16pt; text-align:left");
+	stylesheet.addStyle(".heading2", "font-weight:bold; font-size:12pt; text-align:left");
+	stylesheet.addStyle(".heading3", "font-weight:bold; font-size:10pt; text-align:left");
 	stylesheet.addStyle(".footer", "text-align:center; font-size:8px; font-family:Courier New;");
 	stylesheet.addStyle(".horizontalLine", "border-top:1px solid orange");
 	stylesheet.addStyle(".borderLeft", "border-left:thin solid orange");
 	stylesheet.addStyle(".borderTop", "border-top:thin solid orange");
 	stylesheet.addStyle(".borderRight", "border-right:thin solid orange");
 	stylesheet.addStyle(".borderBottom", "border-bottom:thin solid orange");
-	stylesheet.addStyle(".textDue", "color:green; background-color:#d8e5d5");
+	stylesheet.addStyle(".textDue", "color:green; background-color:#cbd7d8");
 	stylesheet.addStyle(".textRecoverable", "color:green; background-color:#FFEFDB");
 	stylesheet.addStyle(".dataCell", "");
-	stylesheet.addStyle(".totalCell", "background-color:#e89366");
-	stylesheet.addStyle(".textGreen", "color:green;");
+	stylesheet.addStyle(".totalCell", "font-weight:bold; color:white; background-color:#dda930; padding-left:1px ;padding-right:1px; border-width:2px; border-bottom-color:white");
+	stylesheet.addStyle(".textGreen", "color:#0a5a4a;");
 	stylesheet.addStyle(".orange", "color:orange;");
 	stylesheet.addStyle(".red", "color:red;");
 	stylesheet.addStyle(".underline", "text-decoration:underline;");
