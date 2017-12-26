@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
+// @id = sa.app.vatreport.2018
 // @api = 1.0
+// @pubdate = 2017-12-27
 // @publisher = Banana.ch SA
 // @description = Saudi Arabia: VAT return  2018 (Beta)
 // @task = app.command
