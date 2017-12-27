@@ -131,12 +131,15 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	report.addParagraph(" ", "");
 	report.addParagraph(param.text.title, "heading1 textGreen");
 	
-
+	/* we create the table */
 	var table = report.addTable("tableI");
-	var col1 = table.addColumn("col1");
-	var col2 = table.addColumn("col2");
-	var col3 = table.addColumn("col3");
-	var col4 = table.addColumn("col4");
+	var col1 = table.addColumn("col1");  /* description */
+	var col2 = table.addColumn("col2");  /* space */
+	var col3 = table.addColumn("col3");  /* amount taxable */
+	var col4 = table.addColumn("col4");  /* space */
+	var col4 = table.addColumn("col5");  /* adjustment */
+	var col4 = table.addColumn("col6");  /* space */
+	var col4 = table.addColumn("col7");  /* vat amount */
 	/**********
 	I.
 	 **********/
@@ -155,23 +158,32 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	/* Header  */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.period + Banana.Converter.toLocaleDateFormat(startDate) + " - " + Banana.Converter.toLocaleDateFormat(endDate), "bold");
+	tableRow.addCell();
 	tableRow.addCell(param.text.headerAmount, "bold center");
+	tableRow.addCell();
 	tableRow.addCell(param.text.headerAdjustments, "bold center");
+	tableRow.addCell();	
 	tableRow.addCell(param.text.headerVat, "bold center");
 	tableRow = table.addRow();
 	tableRow.addCell();
+	tableRow.addCell();
 	tableRow.addCell(param.text.headerCurrency, "bold center");
+	tableRow.addCell();
 	tableRow.addCell(param.text.headerCurrency, "bold center");
+	tableRow.addCell();
 	tableRow.addCell(param.text.headerCurrency, "bold center");
 
 	/* 1 - Standard rated sales */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description1, "textDue");
+	tableRow.addCell();
 	taxable = getGr1VatBalance(banDoc, transactions, "1", 2, startDate, endDate);
 	tableRow.addCell(formatNumber(taxable), "right dataCell");
+	tableRow.addCell();
 	/* Adjustment is positive for deductions */
 	adjustment = getGr1VatBalance(banDoc, transactions, "1A", 1, startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment), "right dataCell");
+	tableRow.addCell();
 	posted = getGr1VatBalance(banDoc, transactions, "1;1A", 4, startDate, endDate);
 	tableRow.addCell(formatNumber(posted), "right totalCell");
 
@@ -182,11 +194,14 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	/* 2 - Sales to customers in VAT implementing GCC countries */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description2, "textDue");
+	tableRow.addCell();
 	taxable = getGr1VatBalance(banDoc, transactions, "2", 2, startDate, endDate);
 	tableRow.addCell(formatNumber(taxable), "right dataCell");
+	tableRow.addCell();
 	/* Adjustment is positive for deductions */
 	adjustment = getGr1VatBalance(banDoc, transactions, "2A", 1, startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment), "right dataCell");
+	tableRow.addCell();
 	posted = getGr1VatBalance(banDoc, transactions, "2;2A", 4, startDate, endDate);
 	if (Banana.SDecimal.isZero(posted)) {
 		tableRow.addCell(formatNumber(posted), "error right dataCell");
@@ -197,11 +212,14 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	/* 3 - Zero rated domestic sales */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description3, "textDue");
+	tableRow.addCell();
 	taxable = getGr1VatBalance(banDoc, transactions, "3", 2, startDate, endDate);
 	tableRow.addCell(formatNumber(taxable), "right dataCell");
+	tableRow.addCell();
 	/* Adjustment is positive for deductions */
 	adjustment = getGr1VatBalance(banDoc, transactions, "3A", 1, startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment), "right dataCell");
+	tableRow.addCell();
 	posted = getGr1VatBalance(banDoc, transactions, "3;3A", 4, startDate, endDate);
 	if (Banana.SDecimal.isZero(posted)) {
 		tableRow.addCell(formatNumber(posted), "error right dataCell");
@@ -212,11 +230,14 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	/* 4 - Exports */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description4, "textDue");
+	tableRow.addCell();
 	taxable = getGr1VatBalance(banDoc, transactions, "4", 2, startDate, endDate);
 	tableRow.addCell(formatNumber(taxable), "right dataCell");
+	tableRow.addCell();
 	/* Adjustment is positive for deductions */
 	adjustment = getGr1VatBalance(banDoc, transactions, "4A", 1, startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment), "right dataCell");
+	tableRow.addCell();
 	posted = getGr1VatBalance(banDoc, transactions, "4;4A", 4, startDate, endDate);
 	if (Banana.SDecimal.isZero(posted)) {
 		tableRow.addCell(formatNumber(posted), "error right dataCell");
@@ -227,11 +248,14 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	/* 5 - Exempt sales: */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description5, "textDue");
+	tableRow.addCell();
 	taxable = getGr1VatBalance(banDoc, transactions, "5", 2, startDate, endDate);
 	tableRow.addCell(formatNumber(taxable), "right dataCell");
+	tableRow.addCell();
 	/* Adjustment is positive for deductions */
 	adjustment = getGr1VatBalance(banDoc, transactions, "5A", 1, startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment), "right dataCell");
+	tableRow.addCell();
 	posted = getGr1VatBalance(banDoc, transactions, "5;5A", 4, startDate, endDate);
 	if (Banana.SDecimal.isZero(posted)) {
 		tableRow.addCell(formatNumber(posted), "error right dataCell");
@@ -242,8 +266,11 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	/* 6 - Total sales: */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description6, "bold textDue");
+	tableRow.addCell();
 	tableRow.addCell(formatNumber(taxableTot, true), "right totalCell");
+	tableRow.addCell();
 	tableRow.addCell(formatNumber(adjustmentTot, true), "right totalCell");
+	tableRow.addCell();
 	tableRow.addCell(formatNumber(postedTotDue, true), "right totalCell");
 	tableRow = table.addRow().addCell("");
 
@@ -254,11 +281,14 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	/* 7 - Standard rated domestic purchases */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description7, "textRecoverable");
+	tableRow.addCell();
 	taxable = getGr1VatBalance(banDoc, transactions, "7", 1, startDate, endDate);
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
+	tableRow.addCell();
 	/* Adjustment is positive for deductions */
 	adjustment = getGr1VatBalance(banDoc, transactions, "7A", 2, startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
+	tableRow.addCell();
 	posted = getGr1VatBalance(banDoc, transactions, "7;7A", 3, startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right totalCell");
 
@@ -269,11 +299,14 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	/* 8 - Imports subject to VAT paid at customs */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description8, "textRecoverable");
+	tableRow.addCell();
 	taxable = getGr1VatBalance(banDoc, transactions, "8", 1, startDate, endDate);
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
+	tableRow.addCell();
 	/* Adjustment is positive for deductions */
 	adjustment = getGr1VatBalance(banDoc, transactions, "8A", 2, startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
+	tableRow.addCell();
 	posted = getGr1VatBalance(banDoc, transactions, "8;8A", 3, startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right totalCell");
 
@@ -284,11 +317,14 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	/* 9 - Imports subject to VAT accounted for through reverse charge mechanism */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description9, "textRecoverable");
+	tableRow.addCell();
 	taxable = getGr1VatBalance(banDoc, transactions, "9", 1, startDate, endDate);
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
+	tableRow.addCell();
 	/* Adjustment is positive for deductions */
 	adjustment = getGr1VatBalance(banDoc, transactions, "9A", 2, startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
+	tableRow.addCell();
 	posted = getGr1VatBalance(banDoc, transactions, "9;9A", 3, startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right totalCell");
 
@@ -299,11 +335,14 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	/* 10 - Zero rated purchases */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description10, "textRecoverable");
+	tableRow.addCell();
 	taxable = getGr1VatBalance(banDoc, transactions, "10", 1, startDate, endDate);
 	tableRow.addCell(formatNumber(taxable), "right dataCell");
+	tableRow.addCell();
 	/* Adjustment is positive for deductions */
 	adjustment = getGr1VatBalance(banDoc, transactions, "10A", 2, startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment), "right dataCell");
+	tableRow.addCell();
 	posted = getGr1VatBalance(banDoc, transactions, "19;10A", 3, startDate, endDate);
 	if (Banana.SDecimal.isZero(posted)) {
 		tableRow.addCell(formatNumber(posted), "error right dataCell");
@@ -314,11 +353,14 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	/* 11 - Exempt purchases */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description11, "textRecoverable");
+	tableRow.addCell();
 	taxable = getGr1VatBalance(banDoc, transactions, "11", 1, startDate, endDate);
 	tableRow.addCell(formatNumber(taxable), "right dataCell");
+	tableRow.addCell();
 	/* Adjustment is positive for deductions */
 	adjustment = getGr1VatBalance(banDoc, transactions, "11A", 2, startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment), "right dataCell");
+	tableRow.addCell();
 	posted = getGr1VatBalance(banDoc, transactions, "11;11A", 3, startDate, endDate);
 	if (Banana.SDecimal.isZero(posted)) {
 		tableRow.addCell(formatNumber(posted), "error right dataCell");
@@ -329,15 +371,23 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	/* 12 - Total pruchases */
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description12, "bold textRecoverable");
+	tableRow.addCell();
 	tableRow.addCell(formatNumber(taxableTot, true), "right totalCell");
+	tableRow.addCell();
 	tableRow.addCell(formatNumber(adjustmentTot, true), "right totalCell");
+	tableRow.addCell();
 	tableRow.addCell(formatNumber(postedTotRecoverable, true), "right totalCell");
+	
+	/* space row */
 	tableRow = table.addRow().addCell("");
 
 	/* 13 - Total due current period */
 	dueCurrentPeriod = Banana.SDecimal.subtract(postedTotDue, postedTotRecoverable);
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description13, "textGreen");
+	tableRow.addCell();
+	tableRow.addCell();
+	tableRow.addCell();
 	tableRow.addCell();
 	tableRow.addCell();
 	if (Banana.SDecimal.abs(dueCurrentPeriod) > 5000) {
@@ -351,12 +401,18 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	tableRow.addCell(param.text.description14, "textGreen");
 	tableRow.addCell();
 	tableRow.addCell();
+	tableRow.addCell();
+	tableRow.addCell();
+	tableRow.addCell();
 	tableRow.addCell(formatNumber(correctionsPreviousPeriod, true), "right totalCell");
 
 	/* 15 - VAT credit carried forward from previous period(s) */
 	//carryForwardPreviousPeriod = Banana.SDecimal.subtract(postedTotDue, postedTotRecoverable);
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description15, "textGreen");
+	tableRow.addCell();
+	tableRow.addCell();
+	tableRow.addCell();
 	tableRow.addCell();
 	tableRow.addCell();
 	tableRow.addCell(formatNumber(carryForwardPreviousPeriod, true), "right dataCell");
@@ -366,6 +422,9 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	netDueOrClaim = Banana.SDecimal.add(netDueOrClaim, carryForwardPreviousPeriod);
 	tableRow = table.addRow();
 	tableRow.addCell(param.text.description16, "bold textGreen");
+	tableRow.addCell();
+	tableRow.addCell();
+	tableRow.addCell();
 	tableRow.addCell();
 	tableRow.addCell();
 	tableRow.addCell(formatNumber(netDueOrClaim, true), "right totalCell");
@@ -760,8 +819,8 @@ function createStyleSheet() {
 	stylesheet.addStyle(".borderBottom", "border-bottom:thin solid orange");
 	stylesheet.addStyle(".textDue", "color:green; background-color:#cbd7d8");
 	stylesheet.addStyle(".textRecoverable", "color:green; background-color:#FFEFDB");
-	stylesheet.addStyle(".dataCell", "");
-	stylesheet.addStyle(".totalCell", "font-weight:bold; color:white; background-color:#dda930; padding-left:1px ;padding-right:1px; border-width:2px; border-bottom-color:white");
+	stylesheet.addStyle(".dataCell", "padding-left:0.5em ;padding-right:0.5em;");
+	stylesheet.addStyle(".totalCell", "font-weight:bold; color:white; background-color:#dda930; padding-left:0.5em ;padding-right:0.5em;");
 	stylesheet.addStyle(".textGreen", "color:#0a5a4a;");
 	stylesheet.addStyle(".orange", "color:orange;");
 	stylesheet.addStyle(".red", "color:red;");
