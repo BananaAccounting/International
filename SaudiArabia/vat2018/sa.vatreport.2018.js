@@ -34,8 +34,6 @@ Saudi Arabia  VAT report -
 /* Function that loads some parameters */
 function loadParam(param, banDoc, startDate, endDate) {
 	param.scriptVersion = Banana.script.getParamLocaleValue('pubdate');
-	param.headerLeft = banDoc.info("Base", "HeaderLeft");
-	param.vatNumber = banDoc.info("AccountingDataBase", "VatNumber");
 	param.startDate = startDate;
 	param.endDate = endDate;
 }
@@ -48,11 +46,10 @@ function loadText(param, banDoc) {
 	param.text.title = "VAT Return Form";
 	param.text.version = "Version " + param.scriptVersion + " (BETA)";
 	param.text.period = "Report Period: ";
-	param.text.vatNum = "VAT identification number: ";
+	param.text.vatNumber = "VAT identification number: ";
 	param.text.headerAmount = "Amount";
-	param.text.headerAdjustments = "Adjoustment";
+	param.text.headerAdjustments = "Adjustment";
 	param.text.headerVat = "VAT amount";
-	param.text.headerCurrency = "(SAD)";
 	param.text.description1 = "- 1 Stanadard rated Sales";
 	param.text.description2 = "– 2 Sales to customers in VAT implementing GCC countries";
 	param.text.description3 = "- 3 Zero rated domestic sales";
@@ -118,11 +115,15 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	// Create the report
 	var report = Banana.Report.newReport(param.reportName);
 
-	if (param.headerLeft) {
-		report.addParagraph(param.headerLeft, "heading2");
+	var headerLeft = banDoc.info("Base", "HeaderLeft");
+	var vatNumber = banDoc.info("AccountingDataBase", "VatNumber");
+	var basicCurrency  = banDoc.info("AccountingDataBase", "BasicCurrency");
+
+	if (headerLeft) {
+		report.addParagraph(headerLeft, "heading2");
 	}
-	if (param.vatNumber) {
-		report.addParagraph(param.text.vatNum + " " + param.vatNumber, "heading3");
+	if (vatNumber) {
+		report.addParagraph(param.text.vatNumber + " " + vatNumber, "heading3");
 	}
 
 	checkUsedVatCodes(param, banDoc, report);
@@ -167,11 +168,11 @@ function createVatReport(param, banDoc, startDate, endDate) {
 	tableRow = table.addRow();
 	tableRow.addCell();
 	tableRow.addCell();
-	tableRow.addCell(param.text.headerCurrency, "bold center");
+	tableRow.addCell(basicCurrency, "bold center");
 	tableRow.addCell();
-	tableRow.addCell(param.text.headerCurrency, "bold center");
+	tableRow.addCell(basicCurrency, "bold center");
 	tableRow.addCell();
-	tableRow.addCell(param.text.headerCurrency, "bold center");
+	tableRow.addCell(basicCurrency, "bold center");
 
 	/* 1 - Standard rated sales */
 	tableRow = table.addRow();
