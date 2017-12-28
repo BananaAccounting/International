@@ -47,6 +47,7 @@ This development should then become the base for an evaluation from the FTA.
 * Saudi Arabia Tax Authority (FAT)
   * [Federal Tax Authority web site](https://www.vat.gov.sa/en)
   * [User guide Tax return](https://www.vat.gov.sa/sites/default/files/2017-11-2/VAT_Manual_English_16_Nov.pdf)
+  * [Arabic User guide Tax return](https://www.vat.gov.sa/sites/default/files/2017-11-2/VAT_Manual_Arabic_16_Nov.pdf)
   
 ## Related information
 * [Gulf Cooperation Council](https://en.wikipedia.org/wiki/Gulf_Cooperation_Council)
