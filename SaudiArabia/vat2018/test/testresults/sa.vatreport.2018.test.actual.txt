@@ -2,7 +2,7 @@
 %%info_test_app{Banana90}{9.0.1}
 %%info_test_os{Windows 10 (10.0)}
 %%info_test_qt{5.9.3}
-%%info_test_date{2017-12-28}{09:08:49.491}
+%%info_test_date{2018-01-02}{10:27:50.732}
 \documentclass{report}
 \usepackage{color}
 \usepackage{adjustbox}
@@ -51,7 +51,7 @@ Report Period: 01.01.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
 \end{tabular}
-\excltest{28.12.2017 - } 
+\excltest{02.01.2018 - } 
 \end{reportvalue}
 \subsection{First quarter report}
 \begin{reportvalue}{First quarter report}
@@ -81,7 +81,7 @@ Report Period: 01.01.2018 - 31.03.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
 \end{tabular}
-\excltest{28.12.2017 - } 
+\excltest{02.01.2018 - } 
 \end{reportvalue}
 \subsection{Second quarter report}
 \begin{reportvalue}{Second quarter report}
@@ -111,7 +111,7 @@ Report Period: 01.04.2018 - 30.06.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
 \end{tabular}
-\excltest{28.12.2017 - } 
+\excltest{02.01.2018 - } 
 \end{reportvalue}
 \subsection{Third quarter report}
 \begin{reportvalue}{Third quarter report}
@@ -141,7 +141,7 @@ Report Period: 01.07.2018 - 30.09.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
 \end{tabular}
-\excltest{28.12.2017 - } 
+\excltest{02.01.2018 - } 
 \end{reportvalue}
 \subsection{Fourth quarter report}
 \begin{reportvalue}{Fourth quarter report}
@@ -171,7 +171,7 @@ Report Period: 01.10.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
 \end{tabular}
-\excltest{28.12.2017 - } 
+\excltest{02.01.2018 - } 
 \end{reportvalue}
 \subsection{January report}
 \begin{reportvalue}{January report}
@@ -201,10 +201,10 @@ Report Period: 01.01.2018 - 31.01.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
 \end{tabular}
-\excltest{28.12.2017 - } 
+\excltest{02.01.2018 - } 
 \end{reportvalue}
 \keyvalue{Result}{Passed}
-%%info_test_time_elapsed{00:00:00.344}
+%%info_test_time_elapsed{00:00:02.781}
 \end{test}
 \begin{test}{testDoubleEntry}
 %Test vatreport_ef1q2018_doubleentry
@@ -237,7 +237,7 @@ Report Period: 01.01.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
 \end{tabular}
-\excltest{28.12.2017 - } 
+\excltest{02.01.2018 - } 
 \end{reportvalue}
 \subsection{First quarter report}
 \begin{reportvalue}{First quarter report}
@@ -267,7 +267,7 @@ Report Period: 01.01.2018 - 31.03.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
 \end{tabular}
-\excltest{28.12.2017 - } 
+\excltest{02.01.2018 - } 
 \end{reportvalue}
 \subsection{Second quarter report}
 \begin{reportvalue}{Second quarter report}
@@ -297,7 +297,7 @@ Report Period: 01.04.2018 - 30.06.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
 \end{tabular}
-\excltest{28.12.2017 - } 
+\excltest{02.01.2018 - } 
 \end{reportvalue}
 \subsection{Third quarter report}
 \begin{reportvalue}{Third quarter report}
@@ -327,7 +327,7 @@ Report Period: 01.07.2018 - 30.09.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
 \end{tabular}
-\excltest{28.12.2017 - } 
+\excltest{02.01.2018 - } 
 \end{reportvalue}
 \subsection{Fourth quarter report}
 \begin{reportvalue}{Fourth quarter report}
@@ -357,7 +357,7 @@ Report Period: 01.10.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
 \end{tabular}
-\excltest{28.12.2017 - } 
+\excltest{02.01.2018 - } 
 \end{reportvalue}
 \subsection{January report}
 \begin{reportvalue}{January report}
@@ -387,12 +387,12 @@ Report Period: 01.01.2018 - 31.01.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
 \end{tabular}
-\excltest{28.12.2017 - } 
+\excltest{02.01.2018 - } 
 \end{reportvalue}
 \keyvalue{Result}{Passed}
-%%info_test_time_elapsed{00:00:00.328}
+%%info_test_time_elapsed{00:00:02.934}
 \end{test}
-%%info_test_time_elapsed{00:00:00.672}
+%%info_test_time_elapsed{00:00:05.715}
 \end{testcase}
-%%info_test_time_elapsed{00:00:00.860}
+%%info_test_time_elapsed{00:00:06.185}
 \end{document}

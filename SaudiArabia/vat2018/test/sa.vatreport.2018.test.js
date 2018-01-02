@@ -16,7 +16,7 @@
 
 // @id = sa.app.vatreport.2018.test
 // @api = 1.0
-// @pubdate = 2017-12-27
+// @pubdate = 2018-01-02
 // @publisher = Banana.ch SA
 // @description = <TEST sa.vatreport.2018.js>
 // @task = app.command
@@ -154,7 +154,9 @@ ReportSAVAT2018Test.prototype.testDoubleEntry = function() {
 //Function that create the report for the test
 function aggiungiReport(banDoc, startDate, endDate, reportName) {
 	var param = {};
-  var vatReport = createVatReport(param, banDoc, startDate, endDate);
-  Test.logger.addReport(reportName, vatReport);
+	param.startDate = startDate;
+	param.endDate = endDate;
+	var vatReport = createVatReport(param, banDoc);
+	Test.logger.addReport(reportName, vatReport);
 }
 
