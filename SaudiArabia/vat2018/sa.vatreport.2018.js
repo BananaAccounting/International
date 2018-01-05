@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// @id = sa.app.vatreport.2018
+// @id = ch.banana.sa.app.vatreport.2018
 // @api = 1.0
 // @pubdate = 2018-01-02
 // @publisher = Banana.ch SA
