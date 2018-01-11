@@ -25,7 +25,7 @@ This development should then become the base for an evaluation from the FTA.
 
 * Specifications
   * BananaApps, Open source based development method.
-  * Based on Banana Accounting 9 [Download Beta 9](https://www.banana.ch/en/node/10142)
+  * Based on [Banana Accounting 9](https://www.banana.ch/en/download_en)
   * Rpository available on github
 
 * Verify the requirements
