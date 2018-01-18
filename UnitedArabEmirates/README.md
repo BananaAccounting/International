@@ -39,6 +39,10 @@ This development should then become the base for an evaluation from the FTA.
   * BananaApps with Summary information
   * BananaApps for FAF 
 
+## Vaiting for the reference documentation
+Currently the information made available from the Federal Tax Authority does not states exactly how companies should report VAT at the end of the period.
+We need to wait for the exact form to be able to define the VAT code and the necessary report.
+
 ## Reference documentation 
 * Banana Accounting Documentation
   * [VAT management](https://www.banana.ch/doc9/en/node/5079)
