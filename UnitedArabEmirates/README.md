@@ -38,6 +38,7 @@ This development should then become the base for an evaluation from the FTA.
     * VAT Table with all the Codes necessary for complying with the VAT report  
   * BananaApps with Summary information
   * BananaApps for FAF 
+  * Printing invoice.
 
 ## Vaiting for the reference documentation
 Currently the information made available from the Federal Tax Authority does not states exactly how companies should report VAT at the end of the period.
