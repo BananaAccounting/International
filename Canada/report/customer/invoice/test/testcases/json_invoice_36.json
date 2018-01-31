@@ -1,0 +1,109 @@
+{
+
+	"billing_info": {
+		"payment_term": "Net 30 Days",
+		"total_amount_vat_exclusive": "1000.00",
+		"total_amount_vat_exclusive_before_discount": "1000.00",
+		"total_amount_vat_inclusive": "1130.00",
+		"total_amount_vat_inclusive_before_discount": "1130.00",
+		"total_categories": [],
+		"total_discount_percent": "",
+		"total_discount_vat_exclusive": "",
+		"total_discount_vat_inclusive": "",
+		"total_rounding_difference": "",
+		"total_to_pay": "1130.00",
+		"total_vat_amount": "130.00",
+		"total_vat_amount_before_discount": "130.00",
+		"total_vat_codes": [],
+		"total_vat_rates": [{
+				"total_amount_vat_exclusive": "1000.00",
+				"total_amount_vat_inclusive": "1130.00",
+				"total_vat_amount": "130.00",
+				"vat_rate": "13.00"
+			}
+		]
+	},
+	"customer_info": {
+		"address1": "V. Campuréta 40",
+		"balance": "1130.00",
+		"balance_base_currency": "1130.00",
+		"city": "Novazzano",
+		"country": "Switzerland",
+		"first_name": "Marco",
+		"last_name": "Alberti",
+		"number": "100003",
+		"origin_row": "106",
+		"origin_table": "Accounts",
+		"postal_code": "6883"
+	},
+	"document_info": {
+		"currency": "CHF",
+		"date": "2018-01-29",
+		"decimals_amounts": 2,
+		"description": "",
+		"doc_type": "10",
+		"locale": "en",
+		"number": "36",
+		"origin_row": "12",
+		"origin_table": "Transactions",
+		"printed": "",
+		"rounding_total": "0.05",
+		"type": "invoice"
+	},
+	"items": [{
+			"account_assignment": "100003",
+			"description": "Preparation of unaudited financial statements and corporate income tax return for the year ended Oct 31, 2017",
+			"details": "",
+			"index": "0",
+			"item_type": "item",
+			"mesure_unit": "",
+			"number": "",
+			"origin_row": "12",
+			"origin_table": "Transactions",
+			"quantity": "1",
+			"total_amount_vat_exclusive": "1000.00",
+			"total_amount_vat_inclusive": "1130.00",
+			"total_vat_amount": "130.00",
+			"unit_price": {
+				"amount_vat_exclusive": null,
+				"amount_vat_inclusive": "1130.00",
+				"calculated_amount_vat_exclusive": "1000.00",
+				"calculated_amount_vat_inclusive": "1130.00",
+				"calculated_vat_amount": "130.00",
+				"currency": "CHF",
+				"vat_code": "V90",
+				"vat_rate": "13.00"
+			}
+		}
+	],
+	"note": [],
+	"parameters": {},
+	"payment_info": {
+		"date_expected": "2018-02-28",
+		"due_date": "2018-02-28",
+		"due_days": "",
+		"due_period": "4_Current",
+		"last_reminder": "",
+		"last_reminder_date": "",
+		"payment_date": ""
+	},
+	"shipping_info": {
+		"different_shipping_address": false
+	},
+	"supplier_info": {
+		"address1": "Via Trevano 7a",
+		"business_name": "Banana.ch SA",
+		"city": "Lugano",
+		"country": "Switzerland",
+		"email": "info@banana.ch",
+		"fax": "416-417-8846",
+		"phone": "416-417-6521",
+		"postal_code": "6900",
+		"vat_number": "867136624RP0001",
+		"web": "www.robertbrennanaccountant.ca"
+	},
+	"transactions": [],
+	"type": "invoice",
+	"version": "1.0"
+
+}
