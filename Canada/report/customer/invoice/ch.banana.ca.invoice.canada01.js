@@ -291,7 +291,10 @@ function printInvoice(jsonInvoice, repDocObj, param) {
 		  lines+=Math.floor(item.description.length/91);
 	  }
 	  descriptionCell.addParagraph(item.description2);
-	  tableRow.addCell("$",classNameEvenRow+" border-left padding-left",1);
+	  if(item.total_amount_vat_exclusive==="")
+		  tableRow.addCell("",classNameEvenRow+" border-left padding-left",1);
+	  else
+		  tableRow.addCell("$",classNameEvenRow+" border-left padding-left",1);
 	  if (className == "note_cell") {
 		 tableRow.addCell("", classNameEvenRow + " padding-left padding-right thin-border-top " + className, 1);
 	  } else {
