@@ -816,67 +816,21 @@ function printInvoice(jsonInvoice, repDocObj, param) {
 
 	function setInvoiceTexts(language) {
 		var texts = {};
-		if (language == 'it') {
-			texts.customer = 'No Cliente';
-			texts.date = 'Data';
-			texts.description = 'Descrizione';
-			texts.invoice = 'Fattura';
-			texts.page = 'Pagina';
-			texts.rounding = 'Arrotondamento';
-			texts.total = 'Totale';
-			texts.totalnet = 'Totale netto';
-			texts.vat = 'IVA';
-			texts.qty = 'Quantità';
-			texts.unit_ref = 'Unità';
-			texts.unit_price = 'Prezzo unità';
-			texts.vat_number = 'Partita IVA: ';
-			texts.bill_to = 'Indirizzo fatturazione';
-			texts.shipping_to = 'Indirizzo spedizione';
-			texts.from = 'DA';
-			texts.to = 'A';
-			texts.param_color_1 = 'Colore sfondo';
-			texts.param_color_2 = 'Colore testo';
-			texts.param_font_family = 'Tipo carattere';
-			texts.param_print_header = 'Includi intestazione pagina (1=si, 0=no)';
-			texts.param_print_paymentslip = 'Includi bollettino di pagamento (1=si, 0=no)';
-			texts.payment_due_date_label = 'Scadenza';
-			texts.payment_terms_label = 'Pagamento';
-			//texts.param_max_items_per_page = 'Numero di linee su ogni fattura';
-		} else if (language == 'de') {
-			texts.customer = 'Kunde-Nr';
-			texts.date = 'Datum';
-			texts.description = 'Beschreibung';
-			texts.invoice = 'Rechnung';
-			texts.page = 'Seite';
-			texts.rounding = 'Rundung';
-			texts.total = 'Total';
-			texts.totalnet = 'Total net';
-			texts.vat = 'MwSt.';
-			texts.qty = 'Menge';
-			texts.unit_ref = 'Einheit';
-			texts.unit_price = 'Preiseinheit';
-			texts.vat_number = 'Mehrwertsteuernummer: ';
-			texts.bill_to = 'Rechnungsadresse';
-			texts.shipping_to = 'Lieferadresse';
-			texts.from = 'VON';
-			texts.to = 'ZU';
-			texts.param_color_1 = 'Hintergrundfarbe';
-			texts.param_color_2 = 'Textfarbe';
-			texts.param_font_family = 'Typ Schriftzeichen';
-			texts.param_print_header = 'Seitenüberschrift einschliessen (1=ja, 0=nein)';
-			texts.payment_due_date_label = 'Fälligkeitsdatum';
-			texts.payment_terms_label = 'Zahlungsbedingungen';
-			//texts.param_max_items_per_page = 'Anzahl der Zeilen auf jeder Rechnung';
-		} else if (language == 'fr') {
+		if (language == 'fr') {
 			texts.customer = 'No Client';
 			texts.date = 'Date';
 			texts.description = 'Description';
 			texts.invoice = 'Facture';
 			texts.page = 'Page';
 			texts.rounding = 'Arrondi';
+			texts.balancedue = 'Balance due';
 			texts.total = 'Total';
 			texts.totalnet = 'Total net';
+			texts.subtotal = 'Subtotal';
+			texts.amount = 'Amount';
+			texts.lessreceived = "Less received on account";
 			texts.vat = 'TVA';
+			texts.HST = 'HST';
 			texts.qty = 'Quantité';
 			texts.unit_ref = 'Unité';
 			texts.unit_price = 'Prix unité';
@@ -889,59 +843,13 @@ function printInvoice(jsonInvoice, repDocObj, param) {
 			texts.param_color_2 = 'Couleur du texte';
 			texts.param_font_family = 'Type caractère';
 			texts.param_print_header = 'Inclure en-tête de page (1=oui, 0=non)';
+			texts.param_print_paymentslip = 'Include payment slip (1=oui, 0=non)';
 			texts.payment_due_date_label = 'Echéance';
 			texts.payment_terms_label = 'Paiement';
-			//texts.param_max_items_per_page = 'Nombre d’éléments sur chaque facture';
-		} else if (language == 'zh') {
-			texts.customer = '客户编号';
-			texts.date = '日期';
-			texts.description = '摘要';
-			texts.invoice = '发票';
-			texts.page = '页数';
-			texts.rounding = '四舍五入';
-			texts.total = '总计';
-			texts.totalnet = '总净值';
-			texts.vat = '增值税';
-			texts.qty = '数量';
-			texts.unit_ref = '单位';
-			texts.unit_price = '单价';
-			texts.vat_number = '增值税号: ';
-			texts.bill_to = '账单地址';
-			texts.shipping_to = '邮寄地址';
-			texts.from = '来自';
-			texts.to = '至';
-			texts.param_color_1 = '背景色';
-			texts.param_color_2 = '文本颜色';
-			texts.param_font_family = '字体类型';
-			texts.param_print_header = '包括页眉 (1=是, 0=否)';
-			texts.payment_due_date_label = '截止日期';
-			texts.payment_terms_label = '付款';
-			//texts.param_max_items_per_page = '每页上的项目数';
-		} else if (language == 'nl') {
-			texts.customer = 'Klantennummer';
-			texts.date = 'Datum';
-			texts.description = 'Beschrijving';
-			texts.invoice = 'Factuur';
-			texts.page = 'Pagina';
-			texts.rounding = 'Afronding';
-			texts.total = 'Totaal';
-			texts.totalnet = 'Totaal netto';
-			texts.vat = 'BTW';
-			texts.qty = 'Hoeveelheid';
-			texts.unit_ref = 'Eenheid';
-			texts.unit_price = 'Eenheidsprijs';
-			texts.vat_number = 'BTW-nummer: ';
-			texts.bill_to = 'Factuuradres';
-			texts.shipping_to = 'Leveringsadres';
-			texts.from = 'VAN';
-			texts.to = 'TOT';
-			texts.param_color_1 = 'Achtergrond kleur';
-			texts.param_color_2 = 'Tekstkleur';
-			texts.param_font_family = 'Lettertype';
-			texts.param_print_header = 'Pagina-koptekst opnemen (1=ja, 0=nee)';
-			texts.payment_due_date_label = 'Vervaldatum';
-			texts.payment_terms_label = 'Betaling';
-			//texts.param_max_items_per_page = 'Aantal artikelen op iedere pagina';
+			texts.phone = 'Phone';
+			texts.fax = 'Fax';
+			texts.email = 'Email';
+			texts.website = 'Website';
 		} else {
 			texts.customer = 'Customer No';
 			texts.date = 'Date';
@@ -952,7 +860,7 @@ function printInvoice(jsonInvoice, repDocObj, param) {
 			texts.balancedue = 'Balance due';
 			texts.total = 'Invoice total';
 			texts.subtotal = 'Subtotal';
-			texts.amount = 'Amount'
+			texts.amount = 'Amount';
 			texts.totalnet = 'Total net';
 			texts.lessreceived = "Less received on account";
 			texts.vat = 'VAT';
@@ -976,7 +884,6 @@ function printInvoice(jsonInvoice, repDocObj, param) {
 			texts.fax = 'Fax';
 			texts.email = 'Email';
 			texts.website = 'Website';
-			//texts.param_max_items_per_page = 'Number of items on each page';
 		}
 		return texts;
 	}

@@ -2,7 +2,7 @@
 %%info_test_app{Banana90}{9.0.2}
 %%info_test_os{Windows 10 (10.0)}
 %%info_test_qt{5.9.2}
-%%info_test_date{2018-01-31}{16:53:33.340}
+%%info_test_date{2018-02-06}{09:34:23.624}
 \documentclass{report}
 \usepackage{color}
 \usepackage{adjustbox}
@@ -22,7 +22,7 @@
 \begin{testcase}{ReportCustomerInvoiceCanada01}
 \begin{test}{test1}
 \keyvalue{Result}{Passed}
-%%info_test_time_elapsed{00:00:00.004}
+%%info_test_time_elapsed{00:00:00.000}
 \end{test}
 \begin{test}{test2}
 \keyvalue{Result}{Passed}
@@ -88,9 +88,9 @@ BALANCE DUE  & $  & 1'130.00 \\
 
 \end{reportvalue}
 \keyvalue{Result}{Passed}
-%%info_test_time_elapsed{00:00:00.328}
+%%info_test_time_elapsed{00:00:00.281}
 \end{test}
-%%info_test_time_elapsed{00:00:00.332}
+%%info_test_time_elapsed{00:00:00.281}
 \end{testcase}
-%%info_test_time_elapsed{00:00:00.588}
+%%info_test_time_elapsed{00:00:00.531}
 \end{document}

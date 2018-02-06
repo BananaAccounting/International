@@ -1,8 +1,8 @@
-%%info_test_name{D:/banana/apps/test/ch.banana.ca.invoice.canada01.test.js}
+%%info_test_name{D:/github/International/Canada/report/customer/invoice/test/ch.banana.ca.invoice.canada01.test.js}
 %%info_test_app{Banana90}{9.0.2}
 %%info_test_os{Windows 10 (10.0)}
 %%info_test_qt{5.9.2}
-%%info_test_date{2018-01-31}{16:42:56.868}
+%%info_test_date{2018-02-06}{09:34:16.576}
 \documentclass{report}
 \usepackage{color}
 \usepackage{adjustbox}
@@ -26,7 +26,7 @@
 \end{test}
 \begin{test}{test2}
 \keyvalue{Result}{Passed}
-%%info_test_time_elapsed{00:00:00.004}
+%%info_test_time_elapsed{00:00:00.000}
 \end{test}
 \begin{test}{testReport}
 %Test ch.banana.ca.invoice.canada01.js
@@ -114,9 +114,9 @@ Via Trevano 7a  \\
 
 \end{reportvalue}
 \keyvalue{Result}{Passed}
-%%info_test_time_elapsed{00:00:00.370}
+%%info_test_time_elapsed{00:00:00.312}
 \end{test}
-%%info_test_time_elapsed{00:00:00.374}
+%%info_test_time_elapsed{00:00:00.312}
 \end{testcase}
-%%info_test_time_elapsed{00:00:00.641}
+%%info_test_time_elapsed{00:00:00.578}
 \end{document}
