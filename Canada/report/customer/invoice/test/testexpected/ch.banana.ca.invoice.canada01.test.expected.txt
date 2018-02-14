@@ -1,8 +1,8 @@
-%%info_test_name{D:/banana/apps/test/ch.banana.ca.invoice.canada01.test.js}
+%%info_test_name{D:/github/International/Canada/report/customer/invoice/test/ch.banana.ca.invoice.canada01.test.js}
 %%info_test_app{Banana90}{9.0.2}
 %%info_test_os{Windows 10 (10.0)}
 %%info_test_qt{5.9.2}
-%%info_test_date{2018-01-31}{16:42:56.868}
+%%info_test_date{2018-02-14}{08:46:15.730}
 \documentclass{report}
 \usepackage{color}
 \usepackage{adjustbox}
@@ -26,7 +26,7 @@
 \end{test}
 \begin{test}{test2}
 \keyvalue{Result}{Passed}
-%%info_test_time_elapsed{00:00:00.004}
+%%info_test_time_elapsed{00:00:00.016}
 \end{test}
 \begin{test}{testReport}
 %Test ch.banana.ca.invoice.canada01.js
@@ -38,7 +38,7 @@ Banana.ch SA  & INVOICE \\
 \end{tabular}
 \begin{tabular}{ l  l  l }
 Via Trevano 7a  \\
-6900 Lugano  Switzerland   \\
+Lugano, ticino 6900 Switzerland   \\
  & DATE: \\
 INVOICE #: \\
 PAYMENT: \\
@@ -54,7 +54,7 @@ Bill To: \\
 }\\
 Marco Alberti \\
 V. CampurÃ©ta 40 \\
-6883 Novazzano \\
+Novazzano, Ticino 6883 \\
 Switzerland \\
  & Phone: \\
 Fax: \\
@@ -89,7 +89,7 @@ BALANCE DUE  & $  & 1'130.00 \\
 \multicolumn{4}{l}{REMITTANCE ADVICE }\\
 Marco Alberti \\
 V. CampurÃ©ta 40 \\
-6883 Novazzano \\
+Novazzano, Ticino 6883 \\
 Switzerland \\
  &   \\
 DATE: \\
@@ -108,15 +108,15 @@ BALANCE DUE: \\
 }\\
 \multicolumn{4}{l}{Banana.ch SA  \\
 Via Trevano 7a  \\
-6900 Lugano Switzerland  \\
+Lugano, ticino 6900 Switzerland  \\
 }\\
 \end{tabular}
 
 \end{reportvalue}
 \keyvalue{Result}{Passed}
-%%info_test_time_elapsed{00:00:00.370}
+%%info_test_time_elapsed{00:00:00.312}
 \end{test}
-%%info_test_time_elapsed{00:00:00.374}
+%%info_test_time_elapsed{00:00:00.328}
 \end{testcase}
-%%info_test_time_elapsed{00:00:00.641}
+%%info_test_time_elapsed{00:00:00.575}
 \end{document}

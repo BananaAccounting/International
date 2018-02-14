@@ -444,13 +444,18 @@ function printInvoice(jsonInvoice, repDocObj, param) {
 	  address = address + invoiceAddress.address3 + "\n";
 	}
 
+	if (invoiceAddress.city) {
+	  address = address + invoiceAddress.city + ", ";
+	}
+	
+	if (invoiceAddress.state) {
+	  address = address + invoiceAddress.state + " ";
+	}
+	
 	if (invoiceAddress.postal_code) {
-	  address = address + invoiceAddress.postal_code + " ";
+	  address = address + invoiceAddress.postal_code + "\n";
 	}
 
-	if (invoiceAddress.city) {
-	  address = address + invoiceAddress.city + "\n";
-	}
 
 	if (invoiceAddress.country) {
 	  address = address + invoiceAddress.country;
@@ -470,14 +475,20 @@ function printInvoice(jsonInvoice, repDocObj, param) {
 	if (invoiceSupplier.address2) {
 	  supplierAddress = supplierAddress + invoiceSupplier.address2 + " \n";
 	}
+	
+	if (invoiceSupplier.city) {
+	  supplierAddress = supplierAddress + invoiceSupplier.city + ", ";
+	}
+	
+	if (invoiceSupplier.state) {
+	  supplierAddress = supplierAddress + invoiceSupplier.state + " ";
+	}
 
 	if (invoiceSupplier.postal_code) {
 	  supplierAddress = supplierAddress + invoiceSupplier.postal_code + " ";
 	}
 
-	if (invoiceSupplier.city) {
-	  supplierAddress = supplierAddress + invoiceSupplier.city + "  ";
-	}
+	
 
 	if (invoiceSupplier.country) {
 	  supplierAddress = supplierAddress + invoiceSupplier.country + "  ";
@@ -512,13 +523,19 @@ function printInvoice(jsonInvoice, repDocObj, param) {
 		  supplierAddress = supplierAddress + invoiceSupplier.address2 + " \n";
 		}
 
+		if (invoiceSupplier.city) {
+		  supplierAddress = supplierAddress + invoiceSupplier.city + ", ";
+		}
+		
+		if (invoiceSupplier.state) {
+		  supplierAddress = supplierAddress + invoiceSupplier.state + " ";
+		}
+		
 		if (invoiceSupplier.postal_code) {
 		  supplierAddress = supplierAddress + invoiceSupplier.postal_code + " ";
 		}
 
-		if (invoiceSupplier.city) {
-		  supplierAddress = supplierAddress + invoiceSupplier.city + " ";
-		}
+		
 
 		if (invoiceSupplier.country) {
 		  supplierAddress = supplierAddress + invoiceSupplier.country + " ";

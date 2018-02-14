@@ -2,7 +2,7 @@
 %%info_test_app{Banana90}{9.0.2}
 %%info_test_os{Windows 10 (10.0)}
 %%info_test_qt{5.9.2}
-%%info_test_date{2018-01-31}{16:53:04.708}
+%%info_test_date{2018-02-14}{08:49:22.129}
 \documentclass{report}
 \usepackage{color}
 \usepackage{adjustbox}
@@ -26,7 +26,7 @@
 \end{test}
 \begin{test}{test2}
 \keyvalue{Result}{Passed}
-%%info_test_time_elapsed{00:00:00.001}
+%%info_test_time_elapsed{00:00:00.000}
 \end{test}
 \begin{test}{testReport}
 %Test ch.banana.ca.invoice.canada01.js
@@ -38,7 +38,7 @@ Banana.ch SA  & INVOICE \\
 \end{tabular}
 \begin{tabular}{ l  l  l }
 Via Trevano 7a  \\
-6900 Lugano  Switzerland   \\
+Lugano, Ticino 6900 Switzerland   \\
  & DATE: \\
 INVOICE #: \\
 PAYMENT: \\
@@ -54,7 +54,7 @@ Bill To: \\
 }\\
 Marco Alberti \\
 V. CampurÃ©ta 40 \\
-6883 Novazzano \\
+Novazzano, Ticino 6883 \\
 Switzerland \\
  & Phone: \\
 Fax: \\
@@ -88,9 +88,9 @@ BALANCE DUE  & $  & 1'130.00 \\
 
 \end{reportvalue}
 \keyvalue{Result}{Passed}
-%%info_test_time_elapsed{00:00:00.416}
+%%info_test_time_elapsed{00:00:00.297}
 \end{test}
-%%info_test_time_elapsed{00:00:00.420}
+%%info_test_time_elapsed{00:00:00.297}
 \end{testcase}
-%%info_test_time_elapsed{00:00:00.704}
+%%info_test_time_elapsed{00:00:00.547}
 \end{document}

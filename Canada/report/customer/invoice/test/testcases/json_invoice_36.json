@@ -1,5 +1,4 @@
 {
-
 	"billing_info": {
 		"payment_term": "Net 30 Days",
 		"total_amount_vat_exclusive": "1000.00",
@@ -30,11 +29,13 @@
 		"city": "Novazzano",
 		"country": "Switzerland",
 		"first_name": "Marco",
+		"lang": "it",
 		"last_name": "Alberti",
 		"number": "100003",
 		"origin_row": "106",
 		"origin_table": "Accounts",
-		"postal_code": "6883"
+		"postal_code": "6883",
+		"state": "Ticino"
 	},
 	"document_info": {
 		"currency": "CHF",
@@ -99,11 +100,11 @@
 		"fax": "416-417-8846",
 		"phone": "416-417-6521",
 		"postal_code": "6900",
+		"state": "Ticino",
 		"vat_number": "867136624RP0001",
 		"web": "www.robertbrennanaccountant.ca"
 	},
 	"transactions": [],
 	"type": "invoice",
 	"version": "1.0"
-
 }
