@@ -51,6 +51,7 @@ We need to wait for the exact form to be able to define the VAT code and the nec
   * [Chart of accounts](https://www.banana.ch/doc9/en/node/3838)
   
 * UAE Federal Tax Authority (FAT)
+  * [Federal Tax Authority - VALUE ADDED TAX (VAT) RETURNS USER GUIDE February 2018](https://www.tax.gov.ae/pdf/vat-returns-user-guide-english.pdf)
   * [Federal Tax Authority web site](https://www.tax.gov.ae/requirement-tax-accounting.aspx)
   * [User guide Tax return](https://home.kpmg.com/content/dam/kpmg/ae/pdf/userguide-excise-tax-returns-uae.pdf)
   * [Certification Application Forms for Tax Accounting Software Providers](https://www.tax.gov.ae/pdf/application-forms-for-tax-accounting-software.pdf)
