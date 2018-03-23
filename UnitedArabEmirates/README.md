@@ -36,7 +36,8 @@ This development should then become the base for an evaluation from the FTA.
     * Multi-Curreny?
 	* Accounting plan 
     * VAT Table with all the Codes necessary for complying with the VAT report  
-  * BananaApps with Summary information
+  * BananaApps with Summary information, based on the VAT Form
+    (See page 10 and 19 of the User Guide)
   * BananaApps for FAF 
   * Printing invoice.
 
