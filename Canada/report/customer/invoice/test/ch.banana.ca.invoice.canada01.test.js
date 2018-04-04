@@ -16,7 +16,7 @@
 
 // @id = ch.banana.ca.invoice.canada01.test
 // @api = 1.0
-// @pubdate = 2018-01-16
+// @pubdate = 2018-04-04
 // @publisher = Banana.ch SA
 // @description = <TEST ch.banana.ca.invoice.canada01.js>
 // @task = app.command
@@ -81,15 +81,6 @@ ReportCustomerInvoiceCanada01.prototype.init = function() {
 // This method will be called after every test method is executed
 ReportCustomerInvoiceCanada01.prototype.cleanup = function() {
 
-}
-
-// All methods starting wiht 'test' will be executed
-ReportCustomerInvoiceCanada01.prototype.test1 = function() {
-   //Test.logger.addKeyValue("key1", "test1");
-}
-
-ReportCustomerInvoiceCanada01.prototype.test2 = function() {
-   //Test.logger.addKeyValue("key1", "test2");
 }
 
 ReportCustomerInvoiceCanada01.prototype.testReport = function() {

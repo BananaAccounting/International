@@ -1,4 +1,0 @@
-			32  - Lugano, ticino 6900 Switzerland   \\
-			 32 + Lugano, Ticino 6900 Switzerland   \\
-			102  - Lugano, ticino 6900 Switzerland  \\
-			 102 + Lugano, Ticino 6900 Switzerland  \\
