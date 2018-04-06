@@ -14,7 +14,7 @@
 //
 // @id = ch.banana.ca.invoice.canada01
 // @api = 1.0
-// @pubdate = 2018-01-23
+// @pubdate = 2018-04-06
 // @publisher = Banana.ch SA
 // @description = Style 1: Canada invoice 01
 // @description.en = Style 1: Canada invoice 01
@@ -34,6 +34,13 @@ function settingsDialog() {
 	  param = JSON.parse(savedParam);
 	}
 	param = verifyParam(param);
+
+   if (typeof (Banana.Ui.openPropertyEditor) !== 'undefined') {
+      param = Banana.Ui.openPropertyEditor('Settings', convertParam(param));
+      if (!param)
+         return;
+   }
+   else {
 	var lang = Banana.document.locale;
 	if (lang.length > 2)
 	  lang = lang.substr(0, 2);
@@ -53,9 +60,66 @@ function settingsDialog() {
 	param.color_2 = Banana.Ui.getText('Settings', texts.param_color_2, param.color_2);
 	if (param.color_2 === undefined)
 	  return;
-
+	}
+	
 	var paramToString = JSON.stringify(param);
 	var value = Banana.document.setScriptSettings(paramToString);
+}
+
+function convertParam(param) {
+   var lang = 'en';
+   if (Banana.document.locale)
+     lang = Banana.document.locale;
+   if (lang.length > 2)
+      lang = lang.substr(0, 2);
+   var texts = setInvoiceTexts(lang);
+
+   var convertedParam = {};
+   convertedParam.version = '1.0';
+   /*array dei parametri dello script*/
+   convertedParam.data = [];
+   
+   var currentParam = {};
+   currentParam.name = 'print_header';
+   currentParam.title = texts.param_print_header;
+   currentParam.type = 'bool';
+   currentParam.value = false;
+   if (param.print_header)
+     currentParam.value = true;
+   var paramToString = JSON.stringify(currentParam);
+   convertedParam.data.push(paramToString);
+
+   var currentParam = {};
+   currentParam.name = 'print_paymentslip';
+   currentParam.title = texts.param_print_paymentslip;
+   currentParam.type = 'bool';
+   currentParam.value = false;
+   if (param.print_paymentslip)
+     currentParam.value = true;
+   var paramToString = JSON.stringify(currentParam);
+   convertedParam.data.push(paramToString);
+
+   currentParam = {};
+   currentParam.name = 'color_1';
+   currentParam.title = texts.param_color_1;
+   currentParam.type = 'string';
+   currentParam.value = '#d8e4e8';
+   if (param.color_1)
+     currentParam.value = param.color_1;
+   paramToString = JSON.stringify(currentParam);
+   convertedParam.data.push(paramToString);
+
+   currentParam = {};
+   currentParam.name = 'color_2';
+   currentParam.title = texts.param_color_2;
+   currentParam.type = 'string';
+   currentParam.value = '#000000';
+   if (param.color_2)
+     currentParam.value = param.color_2;
+   paramToString = JSON.stringify(currentParam);
+   convertedParam.data.push(paramToString);
+
+   return convertedParam;
 }
 
 function initParam() {
