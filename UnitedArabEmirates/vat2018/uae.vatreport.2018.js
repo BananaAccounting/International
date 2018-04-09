@@ -31,12 +31,14 @@
 	Saudi Arabia  VAT report
  **/
 
+var param = {};
+
 /* Function that loads some parameters */
-function loadParam(param, banDoc) {
+function loadParam(banDoc) {
 }
 
 /* Function that loads all the description texts */
-function loadText(param, banDoc) {
+function loadText(banDoc) {
 	var lan = banDoc.info("Base", "Language");
 	param.text = {};
 	param.text.reportName = "VAT Report United Arab Emirates";
@@ -80,7 +82,6 @@ function loadText(param, banDoc) {
 /* Main function */
 function exec() {
 
-	var param = {};
 	//Check the version of Banana. If < than 9.0.0.171128 the script does not start
 	var requiredVersion = "9.0.2";
 	if (Banana.compareVersion && Banana.compareVersion(Banana.application.version, requiredVersion) >= 0) {
@@ -95,11 +96,8 @@ function exec() {
 			return;
 		}
 
-		//Create the VAT report
-		param.startDate = dateform.selectionStartDate;
-		param.endDate = dateform.selectionEndDate;
-		
-		var report = createVatReport(param, Banana.document);
+		//Create the VAT report		
+		var report = createVatReport(Banana.document, dateform.selectionStartDate, dateform.selectionEndDate);
 
 		//Add styles and print the report
 		var stylesheet = createStyleSheet();
@@ -111,13 +109,13 @@ function exec() {
 }
 
 /* Function that creates and prints the report */
-function createVatReport(param, banDoc) {
+function createVatReport(banDoc, startDate, endDate) {
 
 	/* Load all the texts */
-	loadText(param, banDoc);
+	loadText(banDoc);
 
 	/* Extract data from journal */
-	var transactions = getJournal(banDoc, param.startDate, param.endDate);
+	var transactions = getJournal(banDoc, startDate, endDate);
 
 	/* Create the report */
 	var report = Banana.Report.newReport(param.reportName);
@@ -138,7 +136,7 @@ function createVatReport(param, banDoc) {
 
 	report.addParagraph(" ", "");
 	report.addParagraph(param.text.title, "heading1");
-	report.addParagraph(param.text.period + Banana.Converter.toLocaleDateFormat(param.startDate) + " - " + Banana.Converter.toLocaleDateFormat(param.endDate), "bold");
+	report.addParagraph(param.text.period + Banana.Converter.toLocaleDateFormat(startDate) + " - " + Banana.Converter.toLocaleDateFormat(endDate), "bold");
 	report.addParagraph(" ", "");
 	report.addParagraph(" ", "");
 	report.addParagraph(" ", "");
@@ -193,13 +191,13 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("1a", "");
 	tableRow.addCell(param.text.description1a, "");
 	tableRow.addCell();
-	taxable = getGr1VatBalance(banDoc, transactions, "1a", 2, "", param.startDate, param.endDate);
+	taxable = getGr1VatBalance(banDoc, transactions, "1a", 2, "", startDate, endDate);
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
 	tableRow.addCell();
-	posted = getGr1VatBalance(banDoc, transactions, "1a", 4, "", param.startDate, param.endDate);
+	posted = getGr1VatBalance(banDoc, transactions, "1a", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1a", 3, "ADJ", param.startDate, param.endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1a", 3, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
@@ -210,13 +208,13 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("1b", "");
 	tableRow.addCell(param.text.description1b, "");
 	tableRow.addCell();
-	taxable = getGr1VatBalance(banDoc, transactions, "1b", 2, "", param.startDate, param.endDate);
+	taxable = getGr1VatBalance(banDoc, transactions, "1b", 2, "", startDate, endDate);
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
 	tableRow.addCell();
-	posted = getGr1VatBalance(banDoc, transactions, "1b", 4, "", param.startDate, param.endDate);
+	posted = getGr1VatBalance(banDoc, transactions, "1b", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1b", 3, "ADJ", param.startDate, param.endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1b", 3, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
@@ -227,13 +225,13 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("1c", "");
 	tableRow.addCell(param.text.description1c, "");
 	tableRow.addCell();
-	taxable = getGr1VatBalance(banDoc, transactions, "1c", 2, "", param.startDate, param.endDate);
+	taxable = getGr1VatBalance(banDoc, transactions, "1c", 2, "", startDate, endDate);
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
 	tableRow.addCell();
-	posted = getGr1VatBalance(banDoc, transactions, "1c", 4, "", param.startDate, param.endDate);
+	posted = getGr1VatBalance(banDoc, transactions, "1c", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1c", 3, "ADJ", param.startDate, param.endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1c", 3, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
@@ -244,13 +242,13 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("1d", "");
 	tableRow.addCell(param.text.description1d, "");
 	tableRow.addCell();
-	taxable = getGr1VatBalance(banDoc, transactions, "1d", 2, "", param.startDate, param.endDate);
+	taxable = getGr1VatBalance(banDoc, transactions, "1d", 2, "", startDate, endDate);
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
 	tableRow.addCell();
-	posted = getGr1VatBalance(banDoc, transactions, "1d", 4, "", param.startDate, param.endDate);
+	posted = getGr1VatBalance(banDoc, transactions, "1d", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1d", 3, "ADJ", param.startDate, param.endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1d", 3, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
@@ -261,13 +259,13 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("1e", "");
 	tableRow.addCell(param.text.description1e, "");
 	tableRow.addCell();
-	taxable = getGr1VatBalance(banDoc, transactions, "1e", 2, "", param.startDate, param.endDate);
+	taxable = getGr1VatBalance(banDoc, transactions, "1e", 2, "", startDate, endDate);
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
 	tableRow.addCell();
-	posted = getGr1VatBalance(banDoc, transactions, "1e", 4, "", param.startDate, param.endDate);
+	posted = getGr1VatBalance(banDoc, transactions, "1e", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1e", 3, "ADJ", param.startDate, param.endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1e", 3, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
@@ -278,13 +276,13 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("1f", "");
 	tableRow.addCell(param.text.description1f, "");
 	tableRow.addCell();
-	taxable = getGr1VatBalance(banDoc, transactions, "1f", 2, "", param.startDate, param.endDate);
+	taxable = getGr1VatBalance(banDoc, transactions, "1f", 2, "", startDate, endDate);
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
 	tableRow.addCell();
-	posted = getGr1VatBalance(banDoc, transactions, "1f", 4, "", param.startDate, param.endDate);
+	posted = getGr1VatBalance(banDoc, transactions, "1f", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1f", 3, "ADJ", param.startDate, param.endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1f", 3, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
@@ -295,13 +293,13 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("1g", "");
 	tableRow.addCell(param.text.description1g, "");
 	tableRow.addCell();
-	taxable = getGr1VatBalance(banDoc, transactions, "1g", 2, "", param.startDate, param.endDate);
+	taxable = getGr1VatBalance(banDoc, transactions, "1g", 2, "", startDate, endDate);
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
 	tableRow.addCell();
-	posted = getGr1VatBalance(banDoc, transactions, "1g", 4, "", param.startDate, param.endDate);
+	posted = getGr1VatBalance(banDoc, transactions, "1g", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1g", 3, "ADJ", param.startDate, param.endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1g", 3, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
@@ -312,8 +310,8 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("2","");
 	tableRow.addCell(param.text.description2, "");
 	tableRow.addCell();
-	taxable = getGr1VatBalance(banDoc, transactions, "2", 2, "", param.startDate, param.endDate);
-	posted = getGr1VatBalance(banDoc, transactions, "2", 4, "", param.startDate, param.endDate);
+	taxable = getGr1VatBalance(banDoc, transactions, "2", 2, "", startDate, endDate);
+	posted = getGr1VatBalance(banDoc, transactions, "2", 4, "", startDate, endDate);
 	if (!Banana.SDecimal.isZero(taxable) && !Banana.SDecimal.isZero(posted)) {
 		tableRow.addCell(formatNumber(taxable, true), "right dataCell");
 		tableRow.addCell();
@@ -333,10 +331,10 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("3","");
 	tableRow.addCell(param.text.description3, "");
 	tableRow.addCell();
-	taxable = getGr1VatBalance(banDoc, transactions, "3", 2, "", param.startDate, param.endDate);
+	taxable = getGr1VatBalance(banDoc, transactions, "3", 2, "", startDate, endDate);
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
 	tableRow.addCell();
-	posted = getGr1VatBalance(banDoc, transactions, "3", 4, "", param.startDate, param.endDate);
+	posted = getGr1VatBalance(banDoc, transactions, "3", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
 	tableRow.addCell();
@@ -348,7 +346,7 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("4","");
 	tableRow.addCell(param.text.description4, "");
 	tableRow.addCell();
-	amount = getGr1VatBalance(banDoc, transactions, "4", 1, "", param.startDate, param.endDate);
+	amount = getGr1VatBalance(banDoc, transactions, "4", 1, "", startDate, endDate);
 	tableRow.addCell(formatNumber(amount, true), "right dataCell");
 	tableRow.addCell();
 	tableRow.addCell();
@@ -361,7 +359,7 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("5","");
 	tableRow.addCell(param.text.description5, "");
 	tableRow.addCell();
-	amount = getGr1VatBalance(banDoc, transactions, "5", 1, "", param.startDate, param.endDate);
+	amount = getGr1VatBalance(banDoc, transactions, "5", 1, "", startDate, endDate);
 	tableRow.addCell(formatNumber(amount, true), "right dataCell");
 	tableRow.addCell();
 	tableRow.addCell();
@@ -374,10 +372,10 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("6","");
 	tableRow.addCell(param.text.description6, "");
 	tableRow.addCell();
-	taxable = getGr1VatBalance(banDoc, transactions, "6", 2, "", param.startDate, param.endDate);
+	taxable = getGr1VatBalance(banDoc, transactions, "6", 2, "", startDate, endDate);
 	tableRow.addCell(formatNumber(taxable, true), "right totalCell");
 	tableRow.addCell();
-	posted = getGr1VatBalance(banDoc, transactions, "6", 4, "", param.startDate, param.endDate);
+	posted = getGr1VatBalance(banDoc, transactions, "6", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right totalCell");
 	tableRow.addCell();
 	tableRow.addCell();
@@ -389,10 +387,10 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("7","");
 	tableRow.addCell(param.text.description7, "");
 	tableRow.addCell();
-	taxable = getGr1VatBalance(banDoc, transactions, "7", 2, "", param.startDate, param.endDate);
+	taxable = getGr1VatBalance(banDoc, transactions, "7", 2, "", startDate, endDate);
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
 	tableRow.addCell();
-	posted = getGr1VatBalance(banDoc, transactions, "7", 4, "", param.startDate, param.endDate);
+	posted = getGr1VatBalance(banDoc, transactions, "7", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
 	tableRow.addCell();
@@ -448,13 +446,13 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("9","");
 	tableRow.addCell(param.text.description9, "");
 	tableRow.addCell();
-	taxable = getGr1VatBalance(banDoc, transactions, "9", 1, "", param.startDate, param.endDate); //no invert
+	taxable = getGr1VatBalance(banDoc, transactions, "9", 1, "", startDate, endDate); //no invert
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
 	tableRow.addCell();
-	posted = getGr1VatBalance(banDoc, transactions, "9", 3, "", param.startDate, param.endDate); //no invert
+	posted = getGr1VatBalance(banDoc, transactions, "9", 3, "", startDate, endDate); //no invert
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "9", 3, "ADJ", param.startDate, param.endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "9", 3, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot2 = Banana.SDecimal.add(taxableTot2, taxable);
 	postedTot2 = Banana.SDecimal.add(postedTot2, posted);
@@ -465,13 +463,13 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell("10","");
 	tableRow.addCell(param.text.description10, "");
 	tableRow.addCell();
-	taxable = getGr1VatBalance(banDoc, transactions, "10", 1, "", param.startDate, param.endDate); //no invert
+	taxable = getGr1VatBalance(banDoc, transactions, "10", 1, "", startDate, endDate); //no invert
 	tableRow.addCell(formatNumber(taxable, true), "right dataCell");
 	tableRow.addCell();
-	posted = getGr1VatBalance(banDoc, transactions, "10", 3, "", param.startDate, param.endDate); //no invert
+	posted = getGr1VatBalance(banDoc, transactions, "10", 3, "", startDate, endDate); //no invert
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "10", 3, "ADJ", param.startDate, param.endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "10", 3, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot2 = Banana.SDecimal.add(taxableTot2, taxable);
 	postedTot2 = Banana.SDecimal.add(postedTot2, posted);
@@ -539,6 +537,46 @@ function createVatReport(param, banDoc) {
 	tableRow.addCell();
 	tableRow.addCell(formatNumber(netDueOrClaim, true), "right totalCell");
 
+    report.addParagraph(" ","");
+    report.addParagraph(" ","");
+    report.addParagraph(" ","");
+
+    /***********************************
+        TABLE IV - Check results
+    ***********************************/
+    var totalFromBanana = getTotalFromBanana(banDoc, startDate, endDate);
+    var totalFromReport = netDueOrClaim;
+
+	var table = report.addTable("tableIV");
+	table.getCaption().addText("Check results", "bold orange");
+	tableRow = table.addRow();
+	tableRow.addCell("", "borderTop", 2);
+
+    tableRow = table.addRow();
+    tableRow.addCell("Total from Banana: ", "", 1);
+    tableRow.addCell(formatNumber(totalFromBanana, true), "right", 1);
+    tableRow.addCell(basicCurrency, "", 1);
+    
+    tableRow = table.addRow();
+    tableRow.addCell("Total from Report:", "", 1);
+    tableRow.addCell(formatNumber(totalFromReport, true), "right", 1);
+    tableRow.addCell(basicCurrency, "", 1);
+
+    //checkSum has to be 0
+    var checkSum = Banana.SDecimal.add(totalFromBanana, totalFromReport);
+    if (checkSum > -0.01 && 0.01 > checkSum) {   
+        tableRow = table.addRow();
+        tableRow.addCell("Checksum must be equal to 0: ", "", 1);
+        tableRow.addCell(formatNumber(checkSum, true),"right", 1);
+        tableRow.addCell(basicCurrency, "", 1);
+    } else {
+    	tableRow = table.addRow();
+        tableRow.addCell("Checksum must be equal to 0: ", "red", 1);
+        tableRow.addCell(formatNumber(checkSum, true),"right red", 1);
+        tableRow.addCell(basicCurrency, "red", 1);
+    }
+    // if (Banana.SDecimal.compare(totalFromBanana, totalFromReport) = 0) {}
+
 	//Add Header and footer
 	addHeader(param, report);
 	addFooter(param, report);
@@ -576,8 +614,9 @@ function checkUsedVatCodesHaveGr1(banDoc, report) {
 }
 
 /* Function that retrieves the total vat from Banana */
-function getTotalFromBanana(banDoc, checkValues, startDate, endDate) {
+function getTotalFromBanana(banDoc, startDate, endDate) {
 	var vatReportTable = banDoc.vatReport(startDate, endDate);
+	var res = "";
 
 	for (var i = 0; i < vatReportTable.rowCount; i++) {
 		var tRow = vatReportTable.row(i);
@@ -585,7 +624,7 @@ function getTotalFromBanana(banDoc, checkValues, startDate, endDate) {
 
 		//The balance is summed in group named "_tot_"
 		if (group === "_tot_") {
-			checkValues.vatAmount = tRow.value("VatBalance"); //VatAmount VatBalance
+			res = tRow.value("VatBalance"); //VatAmount VatBalance
 
 			// //In order to compare correctly the values we have to invert the sign of the result from Banana (if negative)
 			// if (Banana.SDecimal.sign(totalFromBanana) == -1) {
@@ -593,6 +632,7 @@ function getTotalFromBanana(banDoc, checkValues, startDate, endDate) {
 			// }
 		}
 	}
+	return res;
 }
 
 /* Function that checks all the vat/gr1 codes used in the transactions.
@@ -984,7 +1024,7 @@ function createStyleSheet() {
 	stylesheet.addStyle(".col6", "");
 	stylesheet.addStyle(".col7", "width:12%");
 
-	/* TableII */
+	/* TableIII */
 	var tableStyle = stylesheet.addStyle("tableIII");
 	tableStyle.setAttribute("width", "100%");
 	stylesheet.addStyle("table.tableIII td", "padding-bottom: 2px; padding-top: 3px");
@@ -992,5 +1032,10 @@ function createStyleSheet() {
 	stylesheet.addStyle(".col0", "width:4%");
 	stylesheet.addStyle(".col1", "");
 
+	/* TableIV */
+	var tableStyle = stylesheet.addStyle("tableIV");
+	tableStyle.setAttribute("width", "100%");
+	stylesheet.addStyle("table.tableIV td", "padding-bottom: 2px; padding-top: 3px");
+	//stylesheet.addStyle("table.tableIII td", "border:thin solid black");
 	return stylesheet;
 }
