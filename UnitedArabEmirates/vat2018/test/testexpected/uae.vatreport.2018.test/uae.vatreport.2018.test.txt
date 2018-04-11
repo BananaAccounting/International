@@ -34,13 +34,13 @@ Report Period: 01.01.2018 - 31.12.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Stanadard rated supplies in Abu Dhabi  &  & 9'000.00  &  & 450.00  &  & \\
-1b  & Stanadard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Stanadard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Stanadard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Stanadard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Stanadard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Stanadard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 9'000.00  &  & 450.00  &  & \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
+1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 21'100.00  &  & 1'055.00  &  & \\
 4  & Zero-rated supplies  &  & 550.00  &  &  &  & \\
@@ -79,7 +79,7 @@ Total from Banana:   & -435.00  & AED \\
 Total from Report:  & 435.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
 \end{tabular}\\
-\excltest{09.04.2018} \end{reportvalue}
+\excltest{11.04.2018} \end{reportvalue}
 \subsection{First semester report}
 \begin{reportvalue}{First semester report}
 UAE-Multicurrency-VAT \\
@@ -91,13 +91,13 @@ Report Period: 01.01.2018 - 30.06.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Stanadard rated supplies in Abu Dhabi  &  & 9'000.00  &  & 450.00  &  & \\
-1b  & Stanadard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Stanadard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Stanadard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Stanadard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Stanadard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Stanadard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 9'000.00  &  & 450.00  &  & \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
+1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 21'100.00  &  & 1'055.00  &  & \\
 4  & Zero-rated supplies  &  & 550.00  &  &  &  & \\
@@ -136,7 +136,7 @@ Total from Banana:   & -435.00  & AED \\
 Total from Report:  & 435.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
 \end{tabular}\\
-\excltest{09.04.2018} \end{reportvalue}
+\excltest{11.04.2018} \end{reportvalue}
 \subsection{Second semester report}
 \begin{reportvalue}{Second semester report}
 UAE-Multicurrency-VAT \\
@@ -148,13 +148,13 @@ Report Period: 01.07.2018 - 31.12.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Stanadard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & \\
-1b  & Stanadard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Stanadard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Stanadard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Stanadard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Stanadard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Stanadard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
+1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 0.00  &  & 0.00  &  & \\
 4  & Zero-rated supplies  &  &  &  &  &  & \\
@@ -193,7 +193,7 @@ Total from Banana:   & 0.00  & AED \\
 Total from Report:  & 0.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
 \end{tabular}\\
-\excltest{09.04.2018} \end{reportvalue}
+\excltest{11.04.2018} \end{reportvalue}
 \subsection{First quarter report}
 \begin{reportvalue}{First quarter report}
 UAE-Multicurrency-VAT \\
@@ -205,13 +205,13 @@ Report Period: 01.01.2018 - 31.03.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Stanadard rated supplies in Abu Dhabi  &  & 9'000.00  &  & 450.00  &  & \\
-1b  & Stanadard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Stanadard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Stanadard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Stanadard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Stanadard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Stanadard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 9'000.00  &  & 450.00  &  & \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
+1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 21'100.00  &  & 1'055.00  &  & \\
 4  & Zero-rated supplies  &  & 550.00  &  &  &  & \\
@@ -250,7 +250,7 @@ Total from Banana:   & -435.00  & AED \\
 Total from Report:  & 435.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
 \end{tabular}\\
-\excltest{09.04.2018} \end{reportvalue}
+\excltest{11.04.2018} \end{reportvalue}
 \subsection{Second quarter report}
 \begin{reportvalue}{Second quarter report}
 UAE-Multicurrency-VAT \\
@@ -262,13 +262,13 @@ Report Period: 01.04.2018 - 30.06.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Stanadard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & \\
-1b  & Stanadard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Stanadard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Stanadard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Stanadard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Stanadard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Stanadard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
+1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 0.00  &  & 0.00  &  & \\
 4  & Zero-rated supplies  &  &  &  &  &  & \\
@@ -307,7 +307,7 @@ Total from Banana:   & 0.00  & AED \\
 Total from Report:  & 0.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
 \end{tabular}\\
-\excltest{09.04.2018} \end{reportvalue}
+\excltest{11.04.2018} \end{reportvalue}
 \subsection{Third quarter report}
 \begin{reportvalue}{Third quarter report}
 UAE-Multicurrency-VAT \\
@@ -319,13 +319,13 @@ Report Period: 01.07.2018 - 30.09.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Stanadard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & \\
-1b  & Stanadard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Stanadard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Stanadard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Stanadard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Stanadard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Stanadard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
+1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 0.00  &  & 0.00  &  & \\
 4  & Zero-rated supplies  &  &  &  &  &  & \\
@@ -364,7 +364,7 @@ Total from Banana:   & 0.00  & AED \\
 Total from Report:  & 0.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
 \end{tabular}\\
-\excltest{09.04.2018} \end{reportvalue}
+\excltest{11.04.2018} \end{reportvalue}
 \subsection{Fourth quarter report}
 \begin{reportvalue}{Fourth quarter report}
 UAE-Multicurrency-VAT \\
@@ -376,13 +376,13 @@ Report Period: 01.10.2018 - 31.12.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Stanadard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & \\
-1b  & Stanadard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Stanadard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Stanadard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Stanadard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Stanadard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Stanadard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
+1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 0.00  &  & 0.00  &  & \\
 4  & Zero-rated supplies  &  &  &  &  &  & \\
@@ -421,7 +421,7 @@ Total from Banana:   & 0.00  & AED \\
 Total from Report:  & 0.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
 \end{tabular}\\
-\excltest{09.04.2018} \end{reportvalue}
+\excltest{11.04.2018} \end{reportvalue}
 \keyvalue{Result}{Passed}
 \end{test}
 \end{testcase}

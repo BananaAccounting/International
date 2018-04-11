@@ -52,13 +52,13 @@ function loadText(banDoc) {
 	param.text.headerAdjustments = "Adjustment";
 
 	param.text.title1 = "VAT on Sales and All Other Outputs";
-	param.text.description1a = "Stanadard rated supplies in Abu Dhabi";
-	param.text.description1b = "Stanadard rated supplies in Dubai";
-	param.text.description1c = "Stanadard rated supplies in Sharjah";
-	param.text.description1d = "Stanadard rated supplies in Ajman";
-	param.text.description1e = "Stanadard rated supplies in Umm Al Quwain";
-	param.text.description1f = "Stanadard rated supplies in Ras Al Khaimah";
-	param.text.description1g = "Stanadard rated supplies in Fujairah";
+	param.text.description1a = "Standard rated supplies in Abu Dhabi";
+	param.text.description1b = "Standard rated supplies in Dubai";
+	param.text.description1c = "Standard rated supplies in Sharjah";
+	param.text.description1d = "Standard rated supplies in Ajman";
+	param.text.description1e = "Standard rated supplies in Umm Al Quwain";
+	param.text.description1f = "Standard rated supplies in Ras Al Khaimah";
+	param.text.description1g = "Standard rated supplies in Fujairah";
 	param.text.description2 = "Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme";
 	param.text.description3 = "Supplies subject to the reverse charge provisions";
 	param.text.description4 = "Zero-rated supplies";
