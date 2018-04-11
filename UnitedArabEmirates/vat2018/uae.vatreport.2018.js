@@ -550,7 +550,7 @@ function createVatReport(banDoc, startDate, endDate) {
 	var table = report.addTable("tableIV");
 	table.getCaption().addText("Check results", "bold orange");
 	tableRow = table.addRow();
-	tableRow.addCell("", "borderTop", 2);
+	tableRow.addCell("", "borderTop", 3);
 
     tableRow = table.addRow();
     tableRow.addCell("Total from Banana: ", "", 1);

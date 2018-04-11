@@ -34,20 +34,20 @@ Report Period: 01.01.2018 - 31.12.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Standard rated supplies in Abu Dhabi  &  & 9'000.00  &  & 450.00  &  & \\
-1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 10'000.00  &  & 500.00  &  & -50.00 \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1d  & Standard rated supplies in Ajman  &  & 8'000.00  &  & 400.00  &  & -10.00 \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & 0.00 \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 21'100.00  &  & 1'055.00  &  & \\
-4  & Zero-rated supplies  &  & 550.00  &  &  &  & \\
-5  & Exempt supplies  &  & 380.00  &  &  &  & \\
+4  & Zero-rated supplies  &  & 500.00  &  &  &  & \\
+5  & Exempt supplies  &  & 400.00  &  &  &  & \\
 6  & Goods imported into the UAE  &  & 0.00  &  & 0.00  &  & \\
 7  & Adjustments to goods imported into the UAE  &  & 0.00  &  & 0.00  &  & \\
-8  & Totals  &  & 31'030.00  &  & 1'505.00  &  & 0.00 \\
+8  & Totals  &  & 40'000.00  &  & 1'955.00  &  & -60.00 \\
 \end{tabular}\\
   \\
   \\
@@ -64,19 +64,19 @@ VAT on Expenses and All Other Inputs \multicolumn{3}{l}{} & Amount \newline (AED
 \begin{tabular}{ l  l }
 Net VAT due \multicolumn{2}{l}{}\\
 12  & Total value of due tax for the period \\
- & 1'505.00 \\
+ & 1'895.00 \\
 13  & Total value of recoverable tax for the period \\
  & 1'070.00 \\
 14  & Payable tax for the period \\
- & 435.00 \\
+ & 825.00 \\
 \end{tabular}\\
   \\
   \\
   \\
 \begin{tabular}{ l  l  l }
-Check results \multicolumn{2}{l}{}\\
-Total from Banana:   & -435.00  & AED \\
-Total from Report:  & 435.00  & AED \\
+Check results \multicolumn{3}{l}{}\\
+Total from Banana:   & -825.00  & AED \\
+Total from Report:  & 825.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
 \end{tabular}\\
 \excltest{11.04.2018} \end{reportvalue}
@@ -91,20 +91,20 @@ Report Period: 01.01.2018 - 30.06.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Standard rated supplies in Abu Dhabi  &  & 9'000.00  &  & 450.00  &  & \\
-1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 10'000.00  &  & 500.00  &  & -50.00 \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1d  & Standard rated supplies in Ajman  &  & 8'000.00  &  & 400.00  &  & -10.00 \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & 0.00 \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 21'100.00  &  & 1'055.00  &  & \\
-4  & Zero-rated supplies  &  & 550.00  &  &  &  & \\
-5  & Exempt supplies  &  & 380.00  &  &  &  & \\
+4  & Zero-rated supplies  &  & 500.00  &  &  &  & \\
+5  & Exempt supplies  &  & 400.00  &  &  &  & \\
 6  & Goods imported into the UAE  &  & 0.00  &  & 0.00  &  & \\
 7  & Adjustments to goods imported into the UAE  &  & 0.00  &  & 0.00  &  & \\
-8  & Totals  &  & 31'030.00  &  & 1'505.00  &  & 0.00 \\
+8  & Totals  &  & 40'000.00  &  & 1'955.00  &  & -60.00 \\
 \end{tabular}\\
   \\
   \\
@@ -121,19 +121,19 @@ VAT on Expenses and All Other Inputs \multicolumn{3}{l}{} & Amount \newline (AED
 \begin{tabular}{ l  l }
 Net VAT due \multicolumn{2}{l}{}\\
 12  & Total value of due tax for the period \\
- & 1'505.00 \\
+ & 1'895.00 \\
 13  & Total value of recoverable tax for the period \\
  & 1'070.00 \\
 14  & Payable tax for the period \\
- & 435.00 \\
+ & 825.00 \\
 \end{tabular}\\
   \\
   \\
   \\
 \begin{tabular}{ l  l  l }
-Check results \multicolumn{2}{l}{}\\
-Total from Banana:   & -435.00  & AED \\
-Total from Report:  & 435.00  & AED \\
+Check results \multicolumn{3}{l}{}\\
+Total from Banana:   & -825.00  & AED \\
+Total from Report:  & 825.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
 \end{tabular}\\
 \excltest{11.04.2018} \end{reportvalue}
@@ -148,13 +148,13 @@ Report Period: 01.07.2018 - 31.12.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Standard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & \\
-1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & 0.00 \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 0.00  &  & 0.00  &  & \\
 4  & Zero-rated supplies  &  &  &  &  &  & \\
@@ -188,7 +188,7 @@ Net VAT due \multicolumn{2}{l}{}\\
   \\
   \\
 \begin{tabular}{ l  l  l }
-Check results \multicolumn{2}{l}{}\\
+Check results \multicolumn{3}{l}{}\\
 Total from Banana:   & 0.00  & AED \\
 Total from Report:  & 0.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
@@ -205,20 +205,20 @@ Report Period: 01.01.2018 - 31.03.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Standard rated supplies in Abu Dhabi  &  & 9'000.00  &  & 450.00  &  & \\
-1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 10'000.00  &  & 500.00  &  & -50.00 \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1d  & Standard rated supplies in Ajman  &  & 8'000.00  &  & 400.00  &  & -10.00 \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & 0.00 \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 21'100.00  &  & 1'055.00  &  & \\
-4  & Zero-rated supplies  &  & 550.00  &  &  &  & \\
-5  & Exempt supplies  &  & 380.00  &  &  &  & \\
+4  & Zero-rated supplies  &  & 500.00  &  &  &  & \\
+5  & Exempt supplies  &  & 400.00  &  &  &  & \\
 6  & Goods imported into the UAE  &  & 0.00  &  & 0.00  &  & \\
 7  & Adjustments to goods imported into the UAE  &  & 0.00  &  & 0.00  &  & \\
-8  & Totals  &  & 31'030.00  &  & 1'505.00  &  & 0.00 \\
+8  & Totals  &  & 40'000.00  &  & 1'955.00  &  & -60.00 \\
 \end{tabular}\\
   \\
   \\
@@ -235,19 +235,19 @@ VAT on Expenses and All Other Inputs \multicolumn{3}{l}{} & Amount \newline (AED
 \begin{tabular}{ l  l }
 Net VAT due \multicolumn{2}{l}{}\\
 12  & Total value of due tax for the period \\
- & 1'505.00 \\
+ & 1'895.00 \\
 13  & Total value of recoverable tax for the period \\
  & 1'070.00 \\
 14  & Payable tax for the period \\
- & 435.00 \\
+ & 825.00 \\
 \end{tabular}\\
   \\
   \\
   \\
 \begin{tabular}{ l  l  l }
-Check results \multicolumn{2}{l}{}\\
-Total from Banana:   & -435.00  & AED \\
-Total from Report:  & 435.00  & AED \\
+Check results \multicolumn{3}{l}{}\\
+Total from Banana:   & -825.00  & AED \\
+Total from Report:  & 825.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
 \end{tabular}\\
 \excltest{11.04.2018} \end{reportvalue}
@@ -262,13 +262,13 @@ Report Period: 01.04.2018 - 30.06.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Standard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & \\
-1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & 0.00 \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 0.00  &  & 0.00  &  & \\
 4  & Zero-rated supplies  &  &  &  &  &  & \\
@@ -302,7 +302,7 @@ Net VAT due \multicolumn{2}{l}{}\\
   \\
   \\
 \begin{tabular}{ l  l  l }
-Check results \multicolumn{2}{l}{}\\
+Check results \multicolumn{3}{l}{}\\
 Total from Banana:   & 0.00  & AED \\
 Total from Report:  & 0.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
@@ -319,13 +319,13 @@ Report Period: 01.07.2018 - 30.09.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Standard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & \\
-1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & 0.00 \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 0.00  &  & 0.00  &  & \\
 4  & Zero-rated supplies  &  &  &  &  &  & \\
@@ -359,7 +359,7 @@ Net VAT due \multicolumn{2}{l}{}\\
   \\
   \\
 \begin{tabular}{ l  l  l }
-Check results \multicolumn{2}{l}{}\\
+Check results \multicolumn{3}{l}{}\\
 Total from Banana:   & 0.00  & AED \\
 Total from Report:  & 0.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
@@ -376,13 +376,13 @@ Report Period: 01.10.2018 - 31.12.2018 \\
   \\
 \begin{tabular}{ l  l  l  l  l  l  l  l }
 VAT on Sales and All Other Outputs \multicolumn{3}{l}{} & Amount \newline (AED) \newline  &  & VAT amount \newline (AED) \newline  &  & Adjustment \newline (AED) \newline \\
-1a  & Standard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & \\
-1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & \\
-1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & \\
-1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & \\
-1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & \\
-1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & \\
-1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & \\
+1a  & Standard rated supplies in Abu Dhabi  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1b  & Standard rated supplies in Dubai  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1c  & Standard rated supplies in Sharjah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1d  & Standard rated supplies in Ajman  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1e  & Standard rated supplies in Umm Al Quwain  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1f  & Standard rated supplies in Ras Al Khaimah  &  & 0.00  &  & 0.00  &  & 0.00 \\
+1g  & Standard rated supplies in Fujairah  &  & 0.00  &  & 0.00  &  & 0.00 \\
 2  & Tax Refunds provided to Tourists under the Tax Refunds for Tourists Scheme  &  & -0.00  &  & -0.00  &  & \\
 3  & Supplies subject to the reverse charge provisions  &  & 0.00  &  & 0.00  &  & \\
 4  & Zero-rated supplies  &  &  &  &  &  & \\
@@ -416,7 +416,7 @@ Net VAT due \multicolumn{2}{l}{}\\
   \\
   \\
 \begin{tabular}{ l  l  l }
-Check results \multicolumn{2}{l}{}\\
+Check results \multicolumn{3}{l}{}\\
 Total from Banana:   & 0.00  & AED \\
 Total from Report:  & 0.00  & AED \\
 Checksum must be equal to 0:   & 0.00  & AED \\
