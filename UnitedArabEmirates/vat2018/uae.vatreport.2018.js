@@ -197,7 +197,7 @@ function createVatReport(banDoc, startDate, endDate) {
 	posted = getGr1VatBalance(banDoc, transactions, "1a", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1a", 3, "ADJ", startDate, endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1a", 4, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
@@ -214,7 +214,7 @@ function createVatReport(banDoc, startDate, endDate) {
 	posted = getGr1VatBalance(banDoc, transactions, "1b", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1b", 3, "ADJ", startDate, endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1b", 4, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
@@ -231,7 +231,7 @@ function createVatReport(banDoc, startDate, endDate) {
 	posted = getGr1VatBalance(banDoc, transactions, "1c", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1c", 3, "ADJ", startDate, endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1c", 4, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
@@ -248,7 +248,7 @@ function createVatReport(banDoc, startDate, endDate) {
 	posted = getGr1VatBalance(banDoc, transactions, "1d", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1d", 3, "ADJ", startDate, endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1d", 4, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
@@ -265,7 +265,7 @@ function createVatReport(banDoc, startDate, endDate) {
 	posted = getGr1VatBalance(banDoc, transactions, "1e", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1e", 3, "ADJ", startDate, endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1e", 4, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
@@ -282,7 +282,7 @@ function createVatReport(banDoc, startDate, endDate) {
 	posted = getGr1VatBalance(banDoc, transactions, "1f", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1f", 3, "ADJ", startDate, endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1f", 4, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
@@ -299,7 +299,7 @@ function createVatReport(banDoc, startDate, endDate) {
 	posted = getGr1VatBalance(banDoc, transactions, "1g", 4, "", startDate, endDate);
 	tableRow.addCell(formatNumber(posted, true), "right dataCell");
 	tableRow.addCell();
-	adjustment = getGr1VatBalance(banDoc, transactions, "1g", 3, "ADJ", startDate, endDate);
+	adjustment = getGr1VatBalance(banDoc, transactions, "1g", 4, "ADJ", startDate, endDate);
 	tableRow.addCell(formatNumber(adjustment, true), "right dataCell");
 	taxableTot = Banana.SDecimal.add(taxableTot, taxable);
 	postedTot = Banana.SDecimal.add(postedTot, posted);
