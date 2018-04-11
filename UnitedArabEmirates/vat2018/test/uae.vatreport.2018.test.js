@@ -16,7 +16,7 @@
 
 // @id = ch.banana.uae.app.vatreport.2018.test
 // @api = 1.0
-// @pubdate = 2018-04-09
+// @pubdate = 2018-04-11
 // @publisher = Banana.ch SA
 // @description = <TEST ch.banana.uae.app.vatreport.2018.js>
 // @task = app.command
@@ -36,22 +36,6 @@
   1. Open the .ac2 file
   2. Execute the .js script
   3. Save the report
-
-
-
-  virtual void addTestBegin(const QString& key, const QString& comment = QString());
-  virtual void addTestEnd();
-
-  virtual void addSection(const QString& key);
-  virtual void addSubSection(const QString& key);
-  virtual void addSubSubSection(const QString& key);
-
-  virtual void addComment(const QString& comment);
-  virtual void addInfo(const QString& key, const QString& value1, const QString& value2 = QString(), const QString& value3 = QString());
-  virtual void addFatalError(const QString& error);
-  virtual void addKeyValue(const QString& key, const QString& value, const QString& comment = QString());
-  virtual void addReport(const QString& key, QJSValue report, const QString& comment = QString());
-  virtual void addTable(const QString& key, QJSValue table, QStringList colXmlNames = QStringList(), const QString& comment = QString());
 
 **/
 
@@ -83,48 +67,34 @@ ReportVatUAE2018.prototype.cleanup = function() {
 
 }
 
-ReportVatUAE2018.prototype.testReport = function() {
-   
-  Test.logger.addComment("Test UAE VAT report 2018");
-
-  var fileAC2 = "file:script/../test/testcases/UAE-Multicurrency-VAT.ac2";
-  var banDoc = Banana.application.openDocument(fileAC2);
+// Generate the expected (correct) file
+ReportVatUAE2018.prototype.testBananaApp = function() {
+  //Open the banana document
+  var banDoc = Banana.application.openDocument("file:script/../test/testcases/UAE-Multicurrency-VAT.ac2");
   if (!banDoc) {return;}
+  Test.assert(banDoc);
 
-  Test.logger.addSection("Actual");
-
-  //Test year
-  Test.logger.addSubSection("Whole year report");
-  aggiungiReport(banDoc, "2018-01-01", "2018-12-31", "Whole year report");
-
-  //Test 1. semester
-  Test.logger.addSubSection("First semester report");
-  aggiungiReport(banDoc, "2018-01-01", "2018-06-30", "First semester report");
-
-  //Test 2. semester
-  Test.logger.addSubSection("Second semester report");
-  aggiungiReport(banDoc, "2018-07-01", "2018-12-31", "Second semester report");
-
-  //Test 1. quarter
-  Test.logger.addSubSection("First quarter report");
-  aggiungiReport(banDoc, "2018-01-01", "2018-03-31", "First quarter report");
-
-  //Test 2. quarter
-  Test.logger.addSubSection("Second quarter report");
-  aggiungiReport(banDoc, "2018-04-01", "2018-06-30", "Second quarter report");
-
-  //Test 3. quarter
-  Test.logger.addSubSection("Third quarter report");
-  aggiungiReport(banDoc, "2018-07-01", "2018-09-30", "Third quarter report");
-
-  //Test 4. quarter
-  Test.logger.addSubSection("Fourth quarter report");
-  aggiungiReport(banDoc, "2018-10-01", "2018-12-31", "Fourth quarter report");
+  this.report_test(banDoc, "2018-01-01", "2018-12-31", "Whole year report");
+  this.report_test(banDoc, "2018-01-01", "2018-06-30", "First semester report");
+  this.report_test(banDoc, "2018-07-01", "2018-12-31", "Second semester report");
+  this.report_test(banDoc, "2018-01-01", "2018-03-31", "First quarter report");
+  this.report_test(banDoc, "2018-04-01", "2018-06-30", "Second quarter report");
+  this.report_test(banDoc, "2018-07-01", "2018-09-30", "Third quarter report");
+  this.report_test(banDoc, "2018-10-01", "2018-12-31", "Fourth quarter report");
+  this.table_test(banDoc, "Vat codes table");
 }
 
 //Function that create the report for the test
-function aggiungiReport(banDoc, startDate, endDate, reportName) {
+ReportVatUAE2018.prototype.report_test = function(banDoc, startDate, endDate, reportName) {
   var vatReport = createVatReport(banDoc, startDate, endDate);
   Test.logger.addReport(reportName, vatReport);
+}
+
+//Function that create the table for the test
+ReportVatUAE2018.prototype.table_test = function(banDoc, tableName) {
+  if (banDoc) {
+    var table = banDoc.table("VatCodes");
+    Test.logger.addTable(tableName, table, ["Group","VatCode","Description","Gr","Gr1","IsDue","AmountType","VatRate","VatRateOnGross","VatAccount"]);
+  }
 }
 
