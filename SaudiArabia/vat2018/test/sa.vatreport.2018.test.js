@@ -16,7 +16,7 @@
 
 // @id = sa.app.vatreport.2018.test
 // @api = 1.0
-// @pubdate = 2018-01-02
+// @pubdate = 2018-04-23
 // @publisher = Banana.ch SA
 // @description = <TEST sa.vatreport.2018.js>
 // @task = app.command
@@ -29,25 +29,9 @@
 
 
 /*
-
   SUMMARY
   -------
-  Javascript test
-
-  virtual void addTestBegin(const QString& key, const QString& comment = QString());
-  virtual void addTestEnd();
-
-  virtual void addSection(const QString& key);
-  virtual void addSubSection(const QString& key);
-  virtual void addSubSubSection(const QString& key);
-
-  virtual void addComment(const QString& comment);
-  virtual void addInfo(const QString& key, const QString& value1, const QString& value2 = QString(), const QString& value3 = QString());
-  virtual void addFatalError(const QString& error);
-  virtual void addKeyValue(const QString& key, const QString& value, const QString& comment = QString());
-  virtual void addReport(const QString& key, QJSValue report, const QString& comment = QString());
-  virtual void addTable(const QString& key, QJSValue table, QStringList colXmlNames = QStringList(), const QString& comment = QString());
-
+  Javascript test for the "sa.vatreport.2018.js" BananaApp
 **/
 
 // Register test case to be executed
@@ -78,81 +62,38 @@ ReportSAVAT2018Test.prototype.cleanup = function() {
 
 }
 
-// All methods starting wiht 'test' will be executed
+//Income & Expenses accounting test
 ReportSAVAT2018Test.prototype.testIncomeExpenses = function() {
-	Test.logger.addComment("Test vatreport_ef1q2018_incomeexpenses");
 
-  var fileAC2 = "file:script/../test/testcases/vat-income-expenses.ac2";
-  var banDoc = Banana.application.openDocument(fileAC2);
-  //Banana.console.log("bandoc : " + banDoc);
-  if (!banDoc) {return;}
+  var banDoc = Banana.application.openDocument("file:script/../test/testcases/vat-income-expenses.ac2");
+  Test.assert(banDoc);
 
-  Test.logger.addSection("Actual");
+  this.report_test(banDoc, "2018-01-01", "2018-12-31", "Whole year report");
+  this.report_test(banDoc, "2018-01-01", "2018-03-31", "First quarter report");
+  this.report_test(banDoc, "2018-04-01", "2018-06-30", "Second quarter report");
+  this.report_test(banDoc, "2018-07-01", "2018-09-30", "Third quarter report");
+  this.report_test(banDoc, "2018-10-01", "2018-12-31", "Fourth quarter report");
+  this.report_test(banDoc, "2018-01-01", "2018-01-31", "January report");
 
-  //Test year
-  Test.logger.addSubSection("Whole year report");
-  aggiungiReport(banDoc, "2018-01-01", "2018-12-31", "Whole year report");
+}
 
-  //Test 1. quarter
-  Test.logger.addSubSection("First quarter report");
-  aggiungiReport(banDoc, "2018-01-01", "2018-03-31", "First quarter report");
-
-  //Test 2. quarter
-  Test.logger.addSubSection("Second quarter report");
-  aggiungiReport(banDoc, "2018-04-01", "2018-06-30", "Second quarter report");
-
-  //Test 3. quarter
-  Test.logger.addSubSection("Third quarter report");
-  aggiungiReport(banDoc, "2018-07-01", "2018-09-30", "Third quarter report");
-
-  //Test 4. quarter
-  Test.logger.addSubSection("Fourth quarter report");
-  aggiungiReport(banDoc, "2018-10-01", "2018-12-31", "Fourth quarter report");
-  
-  //Test January
-  Test.logger.addSubSection("January report");
-  aggiungiReport(banDoc, "2018-01-01", "2018-01-31", "January report");
-  }
-
+//Double entry accounting test
 ReportSAVAT2018Test.prototype.testDoubleEntry = function() {
    
-  Test.logger.addComment("Test vatreport_ef1q2018_doubleentry");
+  var banDoc = Banana.application.openDocument("file:script/../test/testcases/vat-double-accrual.ac2");
+  Test.assert(banDoc);
 
-  var fileAC2 = "file:script/../test/testcases/vat-double-accrual.ac2";
-  var banDoc = Banana.application.openDocument(fileAC2);
-  Banana.console.log("bandoc : " + banDoc);
-  if (!banDoc) {return;}
-
-  Test.logger.addSection("Actual");
-
-  //Test year
-  Test.logger.addSubSection("Whole year report");
-  aggiungiReport(banDoc, "2018-01-01", "2018-12-31", "Whole year report");
-
-  //Test 1. quarter
-  Test.logger.addSubSection("First quarter report");
-  aggiungiReport(banDoc, "2018-01-01", "2018-03-31", "First quarter report");
-
-  //Test 2. quarter
-  Test.logger.addSubSection("Second quarter report");
-  aggiungiReport(banDoc, "2018-04-01", "2018-06-30", "Second quarter report");
-
-  //Test 3. quarter
-  Test.logger.addSubSection("Third quarter report");
-  aggiungiReport(banDoc, "2018-07-01", "2018-09-30", "Third quarter report");
-
-  //Test 4. quarter
-  Test.logger.addSubSection("Fourth quarter report");
-  aggiungiReport(banDoc, "2018-10-01", "2018-12-31", "Fourth quarter report");
-  
-  //Test January
-  Test.logger.addSubSection("January report");
-  aggiungiReport(banDoc, "2018-01-01", "2018-01-31", "January report");
-  
+  this.report_test(banDoc, "2018-01-01", "2018-12-31", "Whole year report");
+  this.report_test(banDoc, "2018-01-01", "2018-03-31", "First quarter report");
+  this.report_test(banDoc, "2018-04-01", "2018-06-30", "Second quarter report");
+  this.report_test(banDoc, "2018-07-01", "2018-09-30", "Third quarter report");
+  this.report_test(banDoc, "2018-10-01", "2018-12-31", "Fourth quarter report");
+  this.report_test(banDoc, "2018-01-01", "2018-01-31", "January report");
+ 
 }
 
 //Function that create the report for the test
-function aggiungiReport(banDoc, startDate, endDate, reportName) {
+ReportSAVAT2018Test.prototype.report_test = function(banDoc, startDate, endDate, reportName) {
 	var param = {};
 	param.startDate = startDate;
 	param.endDate = endDate;
