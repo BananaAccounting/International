@@ -1,12 +1,12 @@
 %%info_test_name{sa.vatreport.2018.test}
 \documentclass{report}
+\usepackage{longtable}
 \usepackage{color}
-\usepackage{adjustbox}
 \usepackage{listings}
 \usepackage[margin=1cm]{geometry}
 \begin{document}
-\newenvironment{tablevalue}[2]{\textbf{Table: #1}\\\begin{adjustbox}{max width=\textwidth}\tabular{#2}}{\endtabular\end{adjustbox}\\}
-\newenvironment{reportvalue}[1]{\textbf{Report: #1}\\}{\\}
+\newenvironment{tablevalue}[2]{\textbf{Table: #1}\begin{longtable}[l]{#2}}{\end{longtable}}
+\newenvironment{reportvalue}[1]{\textbf{Report: #1}\\}{}
 \lstnewenvironment{jsonvalue}[1]{\textbf{Json: #1}\lstset{language=Java}}{}
 \lstnewenvironment{xmlvalue}[1]{\textbf{Xml: #1}\lstset{language=Xml}}{}
 \newcommand{\info}[2]{\textit{#1: #2}\\}
@@ -14,10 +14,11 @@
 \newcommand{\keyvalue}[2]{\textbf{Keyvalue: #1} #2\\}
 \newcommand{\textvalue}[1]{#1\\}
 \newcommand{\excltest}[1]{\\Excluded from compare: #1}
+\newcommand{\lognewpage}{\newpage}
 \newenvironment{testcase}[1]{\section*{Test: #1}}{\newpage}
 \newenvironment{test}[1]{\section*{Test case: #1}}{}
 %Begin test data
-%%SCRIPT{/Users/ivan/Documents/GitHub/International/SaudiArabia/vat2018/test/sa.vatreport.2018.test.js}
+%%SCRIPT{/Users/lorenzo/Programmazione/GitHub/BananaAccounting/International/SaudiArabia/vat2018/test/sa.vatreport.2018.test.js}
 %
 \begin{testcase}{ReportSAVAT2018Test}
 \begin{test}{testIncomeExpenses}
@@ -26,7 +27,7 @@ Saudi Arabia Small Company \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
-\begin{tabular}{ l  l  l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l  l  l }
 Report Period: 01.01.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 10'900.00  &  & 1'100.00  &  & 490.00 \\
@@ -47,14 +48,15 @@ Report Period: 01.01.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  &  &  &  & 14.50 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
-\end{tabular}\\
-\excltest{23.04.2018 - } \end{reportvalue}
+\end{longtable}
+\excltest{25.06.2018 - } \\
+\end{reportvalue}
 \begin{reportvalue}{First quarter report}
 Saudi Arabia Small Company \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
-\begin{tabular}{ l  l  l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l  l  l }
 Report Period: 01.01.2018 - 31.03.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 10'900.00  &  & 1'100.00  &  & 490.00 \\
@@ -75,14 +77,15 @@ Report Period: 01.01.2018 - 31.03.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  &  &  &  & 14.50 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
-\end{tabular}\\
-\excltest{23.04.2018 - } \end{reportvalue}
+\end{longtable}
+\excltest{25.06.2018 - } \\
+\end{reportvalue}
 \begin{reportvalue}{Second quarter report}
 Saudi Arabia Small Company \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
-\begin{tabular}{ l  l  l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l  l  l }
 Report Period: 01.04.2018 - 30.06.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 0.00  &  & 0.00  &  & 0.00 \\
@@ -103,14 +106,15 @@ Report Period: 01.04.2018 - 30.06.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  &  &  &  & 0.00 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
-\end{tabular}\\
-\excltest{23.04.2018 - } \end{reportvalue}
+\end{longtable}
+\excltest{25.06.2018 - } \\
+\end{reportvalue}
 \begin{reportvalue}{Third quarter report}
 Saudi Arabia Small Company \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
-\begin{tabular}{ l  l  l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l  l  l }
 Report Period: 01.07.2018 - 30.09.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 0.00  &  & 0.00  &  & 0.00 \\
@@ -131,14 +135,15 @@ Report Period: 01.07.2018 - 30.09.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  &  &  &  & 0.00 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
-\end{tabular}\\
-\excltest{23.04.2018 - } \end{reportvalue}
+\end{longtable}
+\excltest{25.06.2018 - } \\
+\end{reportvalue}
 \begin{reportvalue}{Fourth quarter report}
 Saudi Arabia Small Company \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
-\begin{tabular}{ l  l  l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l  l  l }
 Report Period: 01.10.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 0.00  &  & 0.00  &  & 0.00 \\
@@ -159,14 +164,15 @@ Report Period: 01.10.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  &  &  &  & 0.00 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
-\end{tabular}\\
-\excltest{23.04.2018 - } \end{reportvalue}
+\end{longtable}
+\excltest{25.06.2018 - } \\
+\end{reportvalue}
 \begin{reportvalue}{January report}
 Saudi Arabia Small Company \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
-\begin{tabular}{ l  l  l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l  l  l }
 Report Period: 01.01.2018 - 31.01.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 10'900.00  &  & 1'100.00  &  & 490.00 \\
@@ -187,8 +193,9 @@ Report Period: 01.01.2018 - 31.01.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  &  &  &  & 14.50 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
-\end{tabular}\\
-\excltest{23.04.2018 - } \end{reportvalue}
+\end{longtable}
+\excltest{25.06.2018 - } \\
+\end{reportvalue}
 \keyvalue{Result}{Passed}
 \end{test}
 \begin{test}{testDoubleEntry}
@@ -197,7 +204,7 @@ Saudi Arabia Company Ltd \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
-\begin{tabular}{ l  l  l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l  l  l }
 Report Period: 01.01.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 10'900.00  &  & 1'100.00  &  & 490.00 \\
@@ -218,14 +225,15 @@ Report Period: 01.01.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  &  &  &  & 14.50 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
-\end{tabular}\\
-\excltest{23.04.2018 - } \end{reportvalue}
+\end{longtable}
+\excltest{25.06.2018 - } \\
+\end{reportvalue}
 \begin{reportvalue}{First quarter report}
 Saudi Arabia Company Ltd \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
-\begin{tabular}{ l  l  l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l  l  l }
 Report Period: 01.01.2018 - 31.03.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 10'900.00  &  & 1'100.00  &  & 490.00 \\
@@ -246,14 +254,15 @@ Report Period: 01.01.2018 - 31.03.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  &  &  &  & 14.50 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
-\end{tabular}\\
-\excltest{23.04.2018 - } \end{reportvalue}
+\end{longtable}
+\excltest{25.06.2018 - } \\
+\end{reportvalue}
 \begin{reportvalue}{Second quarter report}
 Saudi Arabia Company Ltd \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
-\begin{tabular}{ l  l  l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l  l  l }
 Report Period: 01.04.2018 - 30.06.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 0.00  &  & 0.00  &  & 0.00 \\
@@ -274,14 +283,15 @@ Report Period: 01.04.2018 - 30.06.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  &  &  &  & 0.00 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
-\end{tabular}\\
-\excltest{23.04.2018 - } \end{reportvalue}
+\end{longtable}
+\excltest{25.06.2018 - } \\
+\end{reportvalue}
 \begin{reportvalue}{Third quarter report}
 Saudi Arabia Company Ltd \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
-\begin{tabular}{ l  l  l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l  l  l }
 Report Period: 01.07.2018 - 30.09.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 0.00  &  & 0.00  &  & 0.00 \\
@@ -302,14 +312,15 @@ Report Period: 01.07.2018 - 30.09.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  &  &  &  & 0.00 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
-\end{tabular}\\
-\excltest{23.04.2018 - } \end{reportvalue}
+\end{longtable}
+\excltest{25.06.2018 - } \\
+\end{reportvalue}
 \begin{reportvalue}{Fourth quarter report}
 Saudi Arabia Company Ltd \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
-\begin{tabular}{ l  l  l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l  l  l }
 Report Period: 01.10.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 0.00  &  & 0.00  &  & 0.00 \\
@@ -330,14 +341,15 @@ Report Period: 01.10.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  &  &  &  & 0.00 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
-\end{tabular}\\
-\excltest{23.04.2018 - } \end{reportvalue}
+\end{longtable}
+\excltest{25.06.2018 - } \\
+\end{reportvalue}
 \begin{reportvalue}{January report}
 Saudi Arabia Company Ltd \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
-\begin{tabular}{ l  l  l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l  l  l }
 Report Period: 01.01.2018 - 31.01.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 10'900.00  &  & 1'100.00  &  & 490.00 \\
@@ -358,8 +370,9 @@ Report Period: 01.01.2018 - 31.01.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 14 Corrections from previous period (between SAR ±5,000)  &  &  &  &  &  & 14.50 \\
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
-\end{tabular}\\
-\excltest{23.04.2018 - } \end{reportvalue}
+\end{longtable}
+\excltest{25.06.2018 - } \\
+\end{reportvalue}
 \keyvalue{Result}{Passed}
 \end{test}
 \end{testcase}
