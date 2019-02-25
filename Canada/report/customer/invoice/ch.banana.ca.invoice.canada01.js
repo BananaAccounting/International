@@ -769,7 +769,7 @@ function printInvoice(jsonInvoice, repDocObj, param) {
 		// GENERAL
 		//====================================================================//
 		var pageStyle = repStyleObj.addStyle("@page");
-		pageStyle.setAttribute("size", "A4 landscape");
+		pageStyle.setAttribute("size", "A4 portrait");
 		repStyleObj.addStyle(".pageReset", "counter-reset: page");
 		repStyleObj.addStyle("body", "font-size: 14pt; font-family:" + param.font_family);
 		repStyleObj.addStyle(".businessname", "font-size: 16pt; font-family:"+param.font_family);

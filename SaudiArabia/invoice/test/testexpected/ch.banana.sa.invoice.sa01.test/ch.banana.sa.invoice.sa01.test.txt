@@ -1,12 +1,12 @@
 %%info_test_name{ch.banana.sa.invoice.sa01.test}
 \documentclass{report}
+\usepackage{longtable}
 \usepackage{color}
-\usepackage{adjustbox}
 \usepackage{listings}
 \usepackage[margin=1cm]{geometry}
 \begin{document}
-\newenvironment{tablevalue}[2]{\textbf{Table: #1}\\\begin{adjustbox}{max width=\textwidth}\tabular{#2}}{\endtabular\end{adjustbox}\\}
-\newenvironment{reportvalue}[1]{\textbf{Report: #1}\\}{\\}
+\newenvironment{tablevalue}[2]{\textbf{Table: #1}\begin{longtable}[l]{#2}}{\end{longtable}}
+\newenvironment{reportvalue}[1]{\textbf{Report: #1}\\}{}
 \lstnewenvironment{jsonvalue}[1]{\textbf{Json: #1}\lstset{language=Java}}{}
 \lstnewenvironment{xmlvalue}[1]{\textbf{Xml: #1}\lstset{language=Xml}}{}
 \newcommand{\info}[2]{\textit{#1: #2}\\}
@@ -14,34 +14,33 @@
 \newcommand{\keyvalue}[2]{\textbf{Keyvalue: #1} #2\\}
 \newcommand{\textvalue}[1]{#1\\}
 \newcommand{\excltest}[1]{\\Excluded from compare: #1}
+\newcommand{\lognewpage}{\newpage}
 \newenvironment{testcase}[1]{\section*{Test: #1}}{\newpage}
 \newenvironment{test}[1]{\section*{Test case: #1}}{}
 %Begin test data
-%%SCRIPT{/Users/ivan/Documents/GitHub/International/SaudiArabia/invoice/test/ch.banana.sa.invoice.sa01.test.js}
+%%SCRIPT{/Users/lorenzo/Programmazione/GitHub/BananaAccounting/International/SaudiArabia/invoice/test/ch.banana.sa.invoice.sa01.test.js}
 %
 \begin{testcase}{ReportInvoiceSA01}
 \begin{test}{testBananaApp}
 \begin{reportvalue}{Test Invoice 50}
-\begin{tabular}{ l  l }
+\begin{longtable}[l]{ l  l }
 \\
  &   \newline VAT Invoice Saudi Arabia Example \newline   \newline Via Trevano 7a, Phone: 1234567890, Fax: 1234567890, Email: info@banana.ch \newline \\
-\end{tabular}\\
-\\
-\begin{tabular}{ l  l }
+\end{longtable}
+\begin{longtable}[l]{ l  l }
 TAX Invoice  & 50 \\
 Date  & 20.11.2018 \\
 Customer No  & 100001 \\
 Due date  & 20.12.2018 \\
 VAT Number  & SA05AB123456 \\
 Page  & 1 \\
-\end{tabular}\\
+\end{longtable}
 Al Sultan Traders \\
 ABC, def, 123 \\
 1234567890 \\
 abc@abc.com \\
-\\
 Testo di inizio.. \\
-\begin{tabular}{ l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l }
 Description  & Quantity  & Currency  & Unit price  & Amount \\
 Service Fee \newline \newline  & 1.00  & SAR  & 23'809.52  & 23'809.52 \\
 Labor: 19 labour persons @ SAR 2000/person \newline \newline  & 19.00  & SAR  & 1'904.76  & 36'190.48 \\
@@ -51,29 +50,27 @@ Material: Cement bags \newline \newline  & 250.00  & SAR  & 52.38  & 13'095.24 \
  & \multicolumn{2}{l}{Total amount } & SAR  & 76'750.00 \\
 \multicolumn{5}{l}{Note... }\\
 \multicolumn{5}{l}{Greetings.. }\\
-\end{tabular}\\
+\end{longtable}
 \end{reportvalue}
 \begin{reportvalue}{Test Invoice 55}
-\begin{tabular}{ l  l }
+\begin{longtable}[l]{ l  l }
 \\
  &   \newline VAT Invoice Saudi Arabia Example \newline   \newline Via Trevano 7a, الهاتف: 1234567890, فاكس: 1234567890, البريد الالكتروني: info@banana.ch \newline \\
-\end{tabular}\\
-\\
-\begin{tabular}{ l  l }
+\end{longtable}
+\begin{longtable}[l]{ l  l }
 فاتورة الضريبة  & 55 \\
 تاريخ  & 20.11.2018 \\
 رقم العميل  & 100002 \\
 تاريخ الاستحقاق  & 20.12.2018 \\
 رقم ضريبة القيمة المضافة  & SA05AB123456 \\
 صفحه  & 1 \\
-\end{tabular}\\
+\end{longtable}
 Al Sultan Traders \\
 ABC, def, 123 \\
 1234567890 \\
 abc@abc.com \\
-\\
 تيالي ايزيكال... \\
-\begin{tabular}{ l  l  l  l  l }
+\begin{longtable}[l]{ l  l  l  l  l }
 وصف  & كميه  & العمله  & سعر الوحدة  & المبلغ \\
 رسوم الخدمة \newline \newline  & 1.00  & SAR  & 23'809.52  & 23'809.52 \\
 العمل: 19 شخصا \newline \newline  & 19.00  & SAR  & 1'904.76  & 36'190.48 \\
@@ -83,7 +80,7 @@ abc@abc.com \\
  & \multicolumn{2}{l}{المبلغ الإجمالي } & SAR  & 76'750.00 \\
 \multicolumn{5}{l}{ملاحظه... }\\
 \multicolumn{5}{l}{تحيات.. }\\
-\end{tabular}\\
+\end{longtable}
 \end{reportvalue}
 \begin{jsonvalue}{JSON of invoice 50}
 "{\n   \"billing_info\":{\n      \"payment_term\":\"\",\n      \"total_amount_vat_exclusive\":\"73095.24\",\n      \"total_amount_vat_exclusive_before_discount\":\"73095.24\",\n      \"total_amount_vat_inclusive\":\"76750.00\",\n      \"total_amount_vat_inclusive_before_discount\":\"76750.00\",\n      \"total_categories\":[\n\n      ],\n      \"total_discount_percent\":\"\",\n      \"total_discount_vat_exclusive\":\"\",\n      \"total_discount_vat_inclusive\":\"\",\n      \"total_rounding_difference\":\"\",\n      \"total_to_pay\":\"76750.00\",\n      \"total_vat_amount\":\"3654.76\",\n      \"total_vat_amount_before_discount\":\"3654.76\",\n      \"total_vat_codes\":[\n\n      ],\n      \"total_vat_rates\":[\n         {\n            \"total_amount_vat_exclusive\":\"73095.24\",\n            \"total_amount_vat_inclusive\":\"76750.00\",\n            \"total_vat_amount\":\"3654.76\",\n            \"vat_rate\":\"5.00\"\n         }\n      ]\n   },\n   \"customer_info\":{\n      \"address1\":\"ABC, def, 123\",\n      \"balance\":\"76750.00\",\n      \"balance_base_currency\":\"76750.00\",\n      \"business_name\":\"Al Sultan Traders\",\n      \"email\":\"abc@abc.com\",\n      \"number\":\"100001\",\n      \"origin_row\":\"104\",\n      \"origin_table\":\"Accounts\",\n      \"phone\":\"1234567890\"\n   },\n   \"document_info\":{\n      \"currency\":\"SAR\",\n      \"date\":\"2018-11-20\",\n      \"decimals_amounts\":2,\n      \"description\":\"\",\n      \"doc_type\":\"10\",\n      \"greetings\":\"Greetings..\",\n      \"locale\":\"en\",\n      \"number\":\"50\",\n      \"origin_row\":\"1\",\n      \"origin_table\":\"Transactions\",\n      \"printed\":\"\",\n      \"rounding_total\":\"\",\n      \"text_begin\":\"Testo di inizio..\",\n      \"type\":\"invoice\"\n   },\n   \"items\":[\n      {\n         \"account_assignment\":\"100001\",\n         \"description\":\"Service Fee\",\n         \"details\":\"\",\n         \"index\":\"0\",\n         \"item_type\":\"item\",\n         \"mesure_unit\":\"\",\n         \"number\":\"\",\n         \"origin_row\":\"1\",\n         \"origin_table\":\"Transactions\",\n         \"quantity\":\"1.0000\",\n         \"total_amount_vat_exclusive\":\"23809.52\",\n         \"total_amount_vat_inclusive\":\"25000.00\",\n         \"total_vat_amount\":\"1190.48\",\n         \"unit_price\":{\n            \"amount_vat_exclusive\":null,\n            \"amount_vat_inclusive\":\"25000.00\",\n            \"calculated_amount_vat_exclusive\":\"23809.52\",\n            \"calculated_amount_vat_inclusive\":\"25000.00\",\n            \"calculated_vat_amount\":\"1190.48\",\n            \"currency\":\"SAR\",\n            \"vat_code\":\"15\",\n            \"vat_rate\":\"5.00\"\n         }\n      },\n      {\n         \"account_assignment\":\"100001\",\n         \"description\":\"Labor: 19 labour persons @ SAR 2000/person\",\n         \"details\":\"\",\n         \"index\":\"1\",\n         \"item_type\":\"item\",\n         \"mesure_unit\":\"\",\n         \"number\":\"\",\n         \"origin_row\":\"2\",\n         \"origin_table\":\"Transactions\",\n         \"quantity\":\"19.0000\",\n         \"total_amount_vat_exclusive\":\"36190.48\",\n         \"total_amount_vat_inclusive\":\"38000.00\",\n         \"total_vat_amount\":\"1809.52\",\n         \"unit_price\":{\n            \"amount_vat_exclusive\":null,\n            \"amount_vat_inclusive\":\"2000.00\",\n            \"calculated_amount_vat_exclusive\":\"1904.76\",\n            \"calculated_amount_vat_inclusive\":\"2000.00\",\n            \"calculated_vat_amount\":\"95.24\",\n            \"currency\":\"SAR\",\n            \"vat_code\":\"15\",\n            \"vat_rate\":\"5.00\"\n         }\n      },\n      {\n         \"account_assignment\":\"100001\",\n         \"description\":\"Material: Cement bags\",\n         \"details\":\"\",\n         \"index\":\"2\",\n         \"item_type\":\"item\",\n         \"mesure_unit\":\"\",\n         \"number\":\"\",\n         \"origin_row\":\"3\",\n         \"origin_table\":\"Transactions\",\n         \"quantity\":\"250.0000\",\n         \"total_amount_vat_exclusive\":\"13095.24\",\n         \"total_amount_vat_inclusive\":\"13750.00\",\n         \"total_vat_amount\":\"654.76\",\n         \"unit_price\":{\n            \"amount_vat_exclusive\":null,\n            \"amount_vat_inclusive\":\"55.00\",\n            \"calculated_amount_vat_exclusive\":\"52.38\",\n            \"calculated_amount_vat_inclusive\":\"55.00\",\n            \"calculated_vat_amount\":\"2.62\",\n            \"currency\":\"SAR\",\n            \"vat_code\":\"15\",\n            \"vat_rate\":\"5.00\"\n         }\n      }\n   ],\n   \"note\":[\n      {\n         \"date\":\"2018-11-20\",\n         \"description\":\"Note...\",\n         \"origin_row\":\"5\",\n         \"origin_table\":\"Transactions\"\n      }\n   ],\n   \"parameters\":{\n\n   },\n   \"payment_info\":{\n      \"date_expected\":\"2018-12-20\",\n      \"due_date\":\"2018-12-20\",\n      \"due_days\":\"\",\n      \"due_period\":\"4_Current\",\n      \"last_reminder\":\"\",\n      \"last_reminder_date\":\"\",\n      \"payment_date\":\"\"\n   },\n   \"shipping_info\":{\n      \"different_shipping_address\":false\n   },\n   \"supplier_info\":{\n      \"address1\":\"Via Trevano 7a\",\n      \"business_name\":\"VAT Invoice Saudi Arabia Example\",\n      \"city\":\"Lugano\",\n      \"country\":\"Switzerland\",\n      \"email\":\"info@banana.ch\",\n      \"fax\":\"1234567890\",\n      \"phone\":\"1234567890\",\n      \"postal_code\":\"6900\",\n      \"vat_number\":\"SA05AB123456\",\n      \"web\":\"www.banana.ch\"\n   },\n   \"transactions\":[\n\n   ],\n   \"type\":\"invoice\",\n   \"version\":\"1.0\"\n}"\end{jsonvalue}

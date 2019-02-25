@@ -1,4 +1,4 @@
-%%info_test_name{sa.vatreport.2018.test}
+%%info_test_name{sa.vatreport.2019.test}
 \documentclass{report}
 \usepackage{longtable}
 \usepackage{color}
@@ -18,9 +18,9 @@
 \newenvironment{testcase}[1]{\section*{Test: #1}}{\newpage}
 \newenvironment{test}[1]{\section*{Test case: #1}}{}
 %Begin test data
-%%SCRIPT{/Users/lorenzo/Programmazione/GitHub/BananaAccounting/International/SaudiArabia/vat2018/test/sa.vatreport.2018.test.js}
+%%SCRIPT{C:/P/GitHub/International/SaudiArabia/vat2019/test/sa.vatreport.2019.test.js}
 %
-\begin{testcase}{ReportSAVAT2018Test}
+\begin{testcase}{ReportSAVAT2019Test}
 \begin{test}{testIncomeExpenses}
 \begin{reportvalue}{Whole year report}
 Saudi Arabia Small Company \\
@@ -28,10 +28,10 @@ VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
 \begin{longtable}[l]{ l  l  l  l  l  l  l }
-Report Period: 01.01.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
+Report Period: 01.01.2019 - 31.12.2019  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 10'900.00  &  & 1'100.00  &  & 490.00 \\
-- 2 Sales to customers in VAT implementing GCC countries  &  & 200.00  &  & 20.00  &  & \\
+- 2 Private Healthcare/ Private Education sales to citizens  &  & 200.00  &  & 20.00  &  & \\
 - 3 Zero rated domestic sales  &  & 300.00  &  & 30.00  &  & \\
 - 4 Exports  &  & 400.00  &  & 40.00  &  & \\
 - 5 Exempt sales  &  & 500.00  &  & 50.00  &  & \\
@@ -49,18 +49,17 @@ Report Period: 01.01.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
 \end{longtable}
-\excltest{25.06.2018 - } \\
-\end{reportvalue}
+\excltest{07.01.2019 - } \#page-nr \end{reportvalue}
 \begin{reportvalue}{First quarter report}
 Saudi Arabia Small Company \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
 \begin{longtable}[l]{ l  l  l  l  l  l  l }
-Report Period: 01.01.2018 - 31.03.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
+Report Period: 01.01.2019 - 31.03.2019  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 10'900.00  &  & 1'100.00  &  & 490.00 \\
-- 2 Sales to customers in VAT implementing GCC countries  &  & 200.00  &  & 20.00  &  & \\
+- 2 Private Healthcare/ Private Education sales to citizens  &  & 200.00  &  & 20.00  &  & \\
 - 3 Zero rated domestic sales  &  & 300.00  &  & 30.00  &  & \\
 - 4 Exports  &  & 400.00  &  & 40.00  &  & \\
 - 5 Exempt sales  &  & 500.00  &  & 50.00  &  & \\
@@ -78,18 +77,17 @@ Report Period: 01.01.2018 - 31.03.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
 \end{longtable}
-\excltest{25.06.2018 - } \\
-\end{reportvalue}
+\excltest{07.01.2019 - } \#page-nr \end{reportvalue}
 \begin{reportvalue}{Second quarter report}
 Saudi Arabia Small Company \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
 \begin{longtable}[l]{ l  l  l  l  l  l  l }
-Report Period: 01.04.2018 - 30.06.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
+Report Period: 01.04.2019 - 30.06.2019  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 0.00  &  & 0.00  &  & 0.00 \\
-- 2 Sales to customers in VAT implementing GCC countries  &  & 0.00  &  & 0.00  &  & \\
+- 2 Private Healthcare/ Private Education sales to citizens  &  & 0.00  &  & 0.00  &  & \\
 - 3 Zero rated domestic sales  &  & 0.00  &  & 0.00  &  & \\
 - 4 Exports  &  & 0.00  &  & 0.00  &  & \\
 - 5 Exempt sales  &  & 0.00  &  & 0.00  &  & \\
@@ -107,18 +105,17 @@ Report Period: 01.04.2018 - 30.06.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
 \end{longtable}
-\excltest{25.06.2018 - } \\
-\end{reportvalue}
+\excltest{07.01.2019 - } \#page-nr \end{reportvalue}
 \begin{reportvalue}{Third quarter report}
 Saudi Arabia Small Company \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
 \begin{longtable}[l]{ l  l  l  l  l  l  l }
-Report Period: 01.07.2018 - 30.09.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
+Report Period: 01.07.2019 - 30.09.2019  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 0.00  &  & 0.00  &  & 0.00 \\
-- 2 Sales to customers in VAT implementing GCC countries  &  & 0.00  &  & 0.00  &  & \\
+- 2 Private Healthcare/ Private Education sales to citizens  &  & 0.00  &  & 0.00  &  & \\
 - 3 Zero rated domestic sales  &  & 0.00  &  & 0.00  &  & \\
 - 4 Exports  &  & 0.00  &  & 0.00  &  & \\
 - 5 Exempt sales  &  & 0.00  &  & 0.00  &  & \\
@@ -136,18 +133,17 @@ Report Period: 01.07.2018 - 30.09.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
 \end{longtable}
-\excltest{25.06.2018 - } \\
-\end{reportvalue}
+\excltest{07.01.2019 - } \#page-nr \end{reportvalue}
 \begin{reportvalue}{Fourth quarter report}
 Saudi Arabia Small Company \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
 \begin{longtable}[l]{ l  l  l  l  l  l  l }
-Report Period: 01.10.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
+Report Period: 01.10.2019 - 31.12.2019  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 0.00  &  & 0.00  &  & 0.00 \\
-- 2 Sales to customers in VAT implementing GCC countries  &  & 0.00  &  & 0.00  &  & \\
+- 2 Private Healthcare/ Private Education sales to citizens  &  & 0.00  &  & 0.00  &  & \\
 - 3 Zero rated domestic sales  &  & 0.00  &  & 0.00  &  & \\
 - 4 Exports  &  & 0.00  &  & 0.00  &  & \\
 - 5 Exempt sales  &  & 0.00  &  & 0.00  &  & \\
@@ -165,18 +161,17 @@ Report Period: 01.10.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
 \end{longtable}
-\excltest{25.06.2018 - } \\
-\end{reportvalue}
+\excltest{07.01.2019 - } \#page-nr \end{reportvalue}
 \begin{reportvalue}{January report}
 Saudi Arabia Small Company \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
 \begin{longtable}[l]{ l  l  l  l  l  l  l }
-Report Period: 01.01.2018 - 31.01.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
+Report Period: 01.01.2019 - 31.01.2019  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 10'900.00  &  & 1'100.00  &  & 490.00 \\
-- 2 Sales to customers in VAT implementing GCC countries  &  & 200.00  &  & 20.00  &  & \\
+- 2 Private Healthcare/ Private Education sales to citizens  &  & 200.00  &  & 20.00  &  & \\
 - 3 Zero rated domestic sales  &  & 300.00  &  & 30.00  &  & \\
 - 4 Exports  &  & 400.00  &  & 40.00  &  & \\
 - 5 Exempt sales  &  & 500.00  &  & 50.00  &  & \\
@@ -194,8 +189,7 @@ Report Period: 01.01.2018 - 31.01.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
 \end{longtable}
-\excltest{25.06.2018 - } \\
-\end{reportvalue}
+\excltest{07.01.2019 - } \#page-nr \end{reportvalue}
 \keyvalue{Result}{Passed}
 \end{test}
 \begin{test}{testDoubleEntry}
@@ -205,10 +199,10 @@ VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
 \begin{longtable}[l]{ l  l  l  l  l  l  l }
-Report Period: 01.01.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
+Report Period: 01.01.2019 - 31.12.2019  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 10'900.00  &  & 1'100.00  &  & 490.00 \\
-- 2 Sales to customers in VAT implementing GCC countries  &  & 200.00  &  & 20.00  &  & \\
+- 2 Private Healthcare/ Private Education sales to citizens  &  & 200.00  &  & 20.00  &  & \\
 - 3 Zero rated domestic sales  &  & 300.00  &  & 30.00  &  & \\
 - 4 Exports  &  & 400.00  &  & 40.00  &  & \\
 - 5 Exempt sales  &  & 500.00  &  & 50.00  &  & \\
@@ -226,18 +220,17 @@ Report Period: 01.01.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
 \end{longtable}
-\excltest{25.06.2018 - } \\
-\end{reportvalue}
+\excltest{07.01.2019 - } \#page-nr \end{reportvalue}
 \begin{reportvalue}{First quarter report}
 Saudi Arabia Company Ltd \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
 \begin{longtable}[l]{ l  l  l  l  l  l  l }
-Report Period: 01.01.2018 - 31.03.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
+Report Period: 01.01.2019 - 31.03.2019  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 10'900.00  &  & 1'100.00  &  & 490.00 \\
-- 2 Sales to customers in VAT implementing GCC countries  &  & 200.00  &  & 20.00  &  & \\
+- 2 Private Healthcare/ Private Education sales to citizens  &  & 200.00  &  & 20.00  &  & \\
 - 3 Zero rated domestic sales  &  & 300.00  &  & 30.00  &  & \\
 - 4 Exports  &  & 400.00  &  & 40.00  &  & \\
 - 5 Exempt sales  &  & 500.00  &  & 50.00  &  & \\
@@ -255,18 +248,17 @@ Report Period: 01.01.2018 - 31.03.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
 \end{longtable}
-\excltest{25.06.2018 - } \\
-\end{reportvalue}
+\excltest{07.01.2019 - } \#page-nr \end{reportvalue}
 \begin{reportvalue}{Second quarter report}
 Saudi Arabia Company Ltd \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
 \begin{longtable}[l]{ l  l  l  l  l  l  l }
-Report Period: 01.04.2018 - 30.06.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
+Report Period: 01.04.2019 - 30.06.2019  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 0.00  &  & 0.00  &  & 0.00 \\
-- 2 Sales to customers in VAT implementing GCC countries  &  & 0.00  &  & 0.00  &  & \\
+- 2 Private Healthcare/ Private Education sales to citizens  &  & 0.00  &  & 0.00  &  & \\
 - 3 Zero rated domestic sales  &  & 0.00  &  & 0.00  &  & \\
 - 4 Exports  &  & 0.00  &  & 0.00  &  & \\
 - 5 Exempt sales  &  & 0.00  &  & 0.00  &  & \\
@@ -284,18 +276,17 @@ Report Period: 01.04.2018 - 30.06.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
 \end{longtable}
-\excltest{25.06.2018 - } \\
-\end{reportvalue}
+\excltest{07.01.2019 - } \#page-nr \end{reportvalue}
 \begin{reportvalue}{Third quarter report}
 Saudi Arabia Company Ltd \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
 \begin{longtable}[l]{ l  l  l  l  l  l  l }
-Report Period: 01.07.2018 - 30.09.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
+Report Period: 01.07.2019 - 30.09.2019  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 0.00  &  & 0.00  &  & 0.00 \\
-- 2 Sales to customers in VAT implementing GCC countries  &  & 0.00  &  & 0.00  &  & \\
+- 2 Private Healthcare/ Private Education sales to citizens  &  & 0.00  &  & 0.00  &  & \\
 - 3 Zero rated domestic sales  &  & 0.00  &  & 0.00  &  & \\
 - 4 Exports  &  & 0.00  &  & 0.00  &  & \\
 - 5 Exempt sales  &  & 0.00  &  & 0.00  &  & \\
@@ -313,18 +304,17 @@ Report Period: 01.07.2018 - 30.09.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
 \end{longtable}
-\excltest{25.06.2018 - } \\
-\end{reportvalue}
+\excltest{07.01.2019 - } \#page-nr \end{reportvalue}
 \begin{reportvalue}{Fourth quarter report}
 Saudi Arabia Company Ltd \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
 \begin{longtable}[l]{ l  l  l  l  l  l  l }
-Report Period: 01.10.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
+Report Period: 01.10.2019 - 31.12.2019  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 0.00  &  & 0.00  &  & 0.00 \\
-- 2 Sales to customers in VAT implementing GCC countries  &  & 0.00  &  & 0.00  &  & \\
+- 2 Private Healthcare/ Private Education sales to citizens  &  & 0.00  &  & 0.00  &  & \\
 - 3 Zero rated domestic sales  &  & 0.00  &  & 0.00  &  & \\
 - 4 Exports  &  & 0.00  &  & 0.00  &  & \\
 - 5 Exempt sales  &  & 0.00  &  & 0.00  &  & \\
@@ -342,18 +332,17 @@ Report Period: 01.10.2018 - 31.12.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 0.00 \\
 \end{longtable}
-\excltest{25.06.2018 - } \\
-\end{reportvalue}
+\excltest{07.01.2019 - } \#page-nr \end{reportvalue}
 \begin{reportvalue}{January report}
 Saudi Arabia Company Ltd \\
 VAT identification number:  123456789012345 \\
   \\
 VAT Return Form \\
 \begin{longtable}[l]{ l  l  l  l  l  l  l }
-Report Period: 01.01.2018 - 31.01.2018  &  & Amount  &  & Adjustment  &  & VAT amount \\
+Report Period: 01.01.2019 - 31.01.2019  &  & Amount  &  & Adjustment  &  & VAT amount \\
  &  & SAR  &  & SAR  &  & SAR \\
 - 1 Stanadard rated Sales  &  & 10'900.00  &  & 1'100.00  &  & 490.00 \\
-- 2 Sales to customers in VAT implementing GCC countries  &  & 200.00  &  & 20.00  &  & \\
+- 2 Private Healthcare/ Private Education sales to citizens  &  & 200.00  &  & 20.00  &  & \\
 - 3 Zero rated domestic sales  &  & 300.00  &  & 30.00  &  & \\
 - 4 Exports  &  & 400.00  &  & 40.00  &  & \\
 - 5 Exempt sales  &  & 500.00  &  & 50.00  &  & \\
@@ -371,8 +360,7 @@ Report Period: 01.01.2018 - 31.01.2018  &  & Amount  &  & Adjustment  &  & VAT a
 - 15 VAT credit carried forward from previous period(s)  &  &  &  &  &  & 0.00 \\
 - 16 Net VAT due (or reclaimed)  &  &  &  &  &  & 397.00 \\
 \end{longtable}
-\excltest{25.06.2018 - } \\
-\end{reportvalue}
+\excltest{07.01.2019 - } \#page-nr \end{reportvalue}
 \keyvalue{Result}{Passed}
 \end{test}
 \end{testcase}
